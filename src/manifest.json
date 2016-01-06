@@ -1,0 +1,20 @@
+{
+  "name": "YNAB export",
+  "description": "Export data in the YNAB format",
+  "version": "0.1",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["ynabExportBackground.js"]
+  },
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": [
+          "Utils.js",
+          "YNAB.js",
+          "ynabExportContent.js"
+        ]
+    }
+  ],
+  "manifest_version": 2
+}
