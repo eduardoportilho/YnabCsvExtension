@@ -6,7 +6,7 @@ Utils.download = function (content, mimetype) {
     window.open(encodedUri);
 }
 
-/*
+/**
  * Converte um texto em um array (linhas) de arrays (colunas).
  * Separador de linha: \n
  * Separador de coluna: \t
@@ -23,4 +23,28 @@ Utils.textTableToRowColArray = function (text) {
         rows.push(row);
     };
     return rows;
+};
+
+/**
+ * Verifica se um array contém um valor
+ * @param array
+ * @param value
+ * @returns {boolean}
+ */
+Utils.arrayContains = function(array, value) {
+    return array.some(function(arrayValue){
+        return arrayValue === value;
+    });
+};
+
+/**
+ * Verifica se um array de strings contém um valor ignorando case e leading/trailing spaces
+ * @param stringArray
+ * @param string
+ * @returns {boolean}
+ */
+Utils.arrayContainsIgnoreCaseAndBlank = function(stringArray, string) {
+    return stringArray.some(function(stringValue){
+        return stringValue.toLowerCase().trim() === string.toLowerCase().trim();
+    });
 }

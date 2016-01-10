@@ -1,14 +1,11 @@
 function YNAB() {
 }
 
-// var csv = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
-
-
 /**
  * Retorna o conteúdo das transações no formato CSV YNAB
- * @param selectionText: texto selecionado (opcional)
- * @param selectionElement: elemento dentro da tabela contendo os dados  (opcional)
- * @returns {*}
+ * @param selectionText texto selecionado (opcional)
+ * @param selectionElement elemento dentro da tabela contendo os dados  (opcional)
+ * @returns (string) conteúdo CSV
  */
 YNAB.extractYNABContent = function (selectionText, selectionElement) {
     if (selectionText && selectionElement) {
@@ -27,9 +24,9 @@ YNAB.extractYNABContent = function (selectionText, selectionElement) {
  * Idem extractYNABContent porém com ambos parametros obrigatórios
  */
 YNAB.extractYNABContentFromTextAndElement = function (selectionText, selectionElement) {
-    var selectionTabularData = Utils.textTableToRowsArray(selectionText);
+    var selectionTabularData = Utils.textTableToRowColArray(selectionText);
     var columnOrder = YNAB.findColumnOrder(selectionTabularData, selectionElement);
-    var csv = YNAB.buildYnabCsv(rows, columnOrder);
+    var csv = YNAB.buildYnabCsv(selectionTabularData, columnOrder);
     return csv;
 };
 
@@ -53,30 +50,42 @@ YNAB.extractYNABContentFromElement = function (selectionElement) {
  * Determina o índice de cada tipo de coluna (date,payee,inflow)
  * @param tabularData dados em linhas e colunas
  * @param elementInTable elemento dentro da tabela que contém os dados (opcional)
- * @returns {*}
+ * @returns {*} object[headerType] = index
  */
 YNAB.findColumnOrder = function (tabularData, elementInTable) {
     //1: header
     if (elementInTable) {
         var result = YNAB.tryToFindColumnOrderFromElementInTable(elementInTable);
         if (result.found) {
-            return result.columnOrder;
+            return result.value;
         }
     }
-    return findColumnOrderUsingSelectionText(tabularData);
+    return YNAB.findColumnOrderUsingSelectionText(tabularData);
 
 };
 
 /**
- * Tenta descobrir a ordem das colunas lendo o header da tabela (obrigatótio
+ * Tenta descobrir a ordem das colunas lendo o header da tabela
  * @param elementInTable elemento dentro da tabela que contém os dados
- * @returns {*}
+ * @returns {*} optional: object[headerType] = index
  */
 YNAB.tryToFindColumnOrderFromElementInTable = function (elementInTable) {
     var headerValuesOptional = YNAB.tryToFindTableHeader(elementInTable);
-    return YNAB.tryToFindColumnOrderUsingTableHeader(headerValuesOptional);
+    if(!headerValuesOptional.found) {
+        return {found: false};
+    }
+    var columnOrder = YNAB.findColumnOrderUsingTableHeader(headerValuesOptional.value);
+    if(YNAB.isValidColumnOrder(columnOrder)) {
+        return {found: true, value: columnOrder};
+    }
+    return {found: false};
 };
 
+/**
+ * Tenta achar o header de uma tabela
+ * @param elementInTable elemento dentro da tabela que contém os dados
+ * @returns {*} optional: string array
+ */
 YNAB.tryToFindTableHeader = function(elementInTable) {
     var table = $(elementInTable).closest('table');
     if (table.length === 0) {
@@ -94,49 +103,63 @@ YNAB.tryToFindTableHeader = function(elementInTable) {
     return {found: false};
 };
 
-
+// obj[headerType] = arrays de titulos possíveis
 var POSSIBLE_HEADER_NAMES = {
     date: ['datum', 'date', 'data'],
     payee: ['transaktion', 'payee', 'descrição'],
     inflow: ['belopp', 'inflow', 'value']
 };
 
-YNAB.tryToFindColumnOrderUsingTableHeader = function (headerValuesOptional) {
-    if(!headerValuesOptional.found) {
-        return {found: false};
-    }
-    var headerValues = headerValuesOptional.value;
-
-
+/**
+ * Tenta descobrir ordem das colunas a partir dos valores do header
+ * @param headerValues string array
+ * @returns {*} optional: object[headerType] = index
+ */
+YNAB.findColumnOrderUsingTableHeader = function (headerValues) {
     var columnOrder = {};
 
     for(var i = 0 ; i < headerValues.length ; i++) {
         var header = headerValues[i];
         for(var columnKey in POSSIBLE_HEADER_NAMES) {
             var nameList = POSSIBLE_HEADER_NAMES[columnKey];
-            var headerIsIncludedOnNameList = nameList.some(function(possibleName){
-                return possibleName === header;
-            });
-
+            var headerIsIncludedOnNameList = Utils.arrayContainsIgnoreCaseAndBlank(nameList, header);
             if(headerIsIncludedOnNameList) {
                 columnOrder[columnKey] = i;
                 break;
             }
         }
     }
-    if(YNAB.isValidColumnOrder(columnOrder)) {
-        return {found: true, value: columnOrder};
+
+    return columnOrder;
+};
+
+/**
+ * Verifica se uma ordem de colunas é valida
+ * @param columnOrder object[headerType] = index
+ * @returns boolean
+ */
+YNAB.isValidColumnOrder = function(columnOrder) {
+    //tem a coluna date?
+    if(!(columnOrder.date >=0)) {
+        return false;
     }
+    var indexes = [];
 
-    return {found: false};
+    for(var k in columnOrder) {
+        var index = columnOrder[k];
+
+        if(!(index >= 0)) {
+            return false;
+        }
+
+        if(Utils.arrayContains(indexes, index)) {
+            return false;
+        }
+
+        indexes.push(index);
+    }
+    return true;
 };
-
-YNAB.isValidColumnOrder = function() {
-
-};
-
-
-
 
 
 YNAB.findColumnOrderUsingSelectionText = function (tabularData) {
@@ -150,6 +173,26 @@ YNAB.findHeaderTableHeaderRow = function (selectionElement) {
 
 //CSV BUILDER
 
-YNAB.buildYnabCsv = function (tabularData, columnOrder) {
 
+
+/**
+ * Monta o CSV
+ * @param tabularData dados em linhas e colunas
+ * @param columnIndex índice das colunas
+ */
+YNAB.buildYnabCsv = function (tabularData, columnIndex) {
+    var csv = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
+    for(var row = 0 ; row < tabularData.length ; row++) {
+        var rowValues = tabularData[row];
+
+        var date = rowValues[columnIndex.date];
+        var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
+        var inflow = columnIndex.inflow >= 0 ? rowValues[columnIndex.inflow] : '';
+        var category = '';
+        var memo = '';
+        var outflow = '';
+
+        csv += date + ',' + payee + ',' + category + ',' + memo + ',' + outflow + ',' + inflow + '\n';
+    }
+    return csv;
 };
