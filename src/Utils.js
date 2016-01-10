@@ -47,4 +47,14 @@ Utils.arrayContainsIgnoreCaseAndBlank = function(stringArray, string) {
     return stringArray.some(function(stringValue){
         return stringValue.toLowerCase().trim() === string.toLowerCase().trim();
     });
-}
+};
+
+
+Utils.getSelectionNodes = function() {
+    var selection = window.getSelection();
+    var nodeA = selection.extentNode.parentElement;
+    var nodeB = selection.baseNode.parentElement;
+    console.log(nodeA, nodeB);
+
+};
+
