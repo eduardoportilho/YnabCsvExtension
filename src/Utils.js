@@ -95,3 +95,29 @@ Utils.extractRowColArrayFromSelection = function(selectionNodes) {
     }
     return rows;
 };
+
+
+Utils.formatMoney = function(text) {
+
+};
+
+
+Utils.formatDate = function(text) {
+    var year, month, day;
+    var tokens = text.split(/\D/);
+
+    //YYYY-XX-XX
+    if(tokens[0].length == 4) {
+        year = tokens[0];
+        month = tokens[1];
+        day = tokens[2];
+    }
+
+    if(parseInt(month) > 12) {
+        var temp = month;
+        month = day;
+        day = temp;
+    }
+
+    return day + '/' + month + '/' + year;
+};

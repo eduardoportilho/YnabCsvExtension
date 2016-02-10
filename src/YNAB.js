@@ -1,4 +1,4 @@
-// Depende de jQuery
+//TODO Depende de jQuery, Utils - Encapsular em IIFE e explicitar dependencias
 
 function YNAB() {
 }
@@ -58,6 +58,7 @@ YNAB.extractYNABContentFromSelectedElements = function (selectedElements) {
     return csv;
 };
 
+//TODO Modularizar
 //COLUMN ORDER
 
 /**
@@ -185,9 +186,9 @@ YNAB.findHeaderTableHeaderRow = function (selectionElement) {
 
 };
 
+
+//TODO Modularizar
 //CSV BUILDER
-
-
 
 /**
  * Monta o CSV
@@ -199,7 +200,7 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
     for(var row = 0 ; row < tabularData.length ; row++) {
         var rowValues = tabularData[row];
 
-        var date = rowValues[columnIndex.date];
+        var date = Utils.formatDate(rowValues[columnIndex.date]);
         var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
         var inflow = columnIndex.inflow >= 0 ? rowValues[columnIndex.inflow] : '';
         var category = '';
@@ -210,3 +211,4 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
     }
     return csv;
 };
+
