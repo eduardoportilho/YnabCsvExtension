@@ -224,8 +224,8 @@ describe("YNAB", function () {
                 ['-1000', 'Payee B', '2015/01/02']
             ], {inflow:0, payee:1, date: 2});
             expect(csv).toEqual(header +
-                '2015/01/01,Payee A,,,,1000\n' +
-                '2015/01/02,Payee B,,,,-1000\n'
+                '01/01/2015,Payee A,,,,1000.00\n' +
+                '02/01/2015,Payee B,,,,-1000.00\n'
             );
         });
 
@@ -289,8 +289,8 @@ describe("YNAB", function () {
                 ' 	2016-01-04	Reservation Kortköp ICA KVANTUM AKERSB	 	-1.025,51	 	 ';
             var csv = YNAB.extractYNABContentFromTextAndElement(selectionText, clickedElement);
             expect(csv).toEqual(header +
-                    '2016-01-04,Reservation Kortköp AKERSBERGA 1283,,,,-150,00\n' +
-                    '2016-01-04,Reservation Kortköp ICA KVANTUM AKERSB,,,,-1.025,51\n'
+                    '04/01/2016,Reservation Kortköp AKERSBERGA 1283,,,,-150.00\n' +
+                    '04/01/2016,Reservation Kortköp ICA KVANTUM AKERSB,,,,-1025.51\n'
             );
         });
     });

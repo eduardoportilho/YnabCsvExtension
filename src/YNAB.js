@@ -202,7 +202,7 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
 
         var date = Utils.formatDate(rowValues[columnIndex.date]);
         var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
-        var inflow = columnIndex.inflow >= 0 ? rowValues[columnIndex.inflow] : '';
+        var inflow = columnIndex.inflow >= 0 ? Utils.formatMoney(rowValues[columnIndex.inflow]) : '';
         var category = '';
         var memo = '';
         var outflow = '';

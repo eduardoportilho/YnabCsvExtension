@@ -98,7 +98,7 @@ Utils.extractRowColArrayFromSelection = function(selectionNodes) {
 
 
 Utils.formatMoney = function(text) {
-
+    return text.toNumber().format({decimalPlaces: 2});
 };
 
 
@@ -121,3 +121,4 @@ Utils.formatDate = function(text) {
 
     return day + '/' + month + '/' + year;
 };
+

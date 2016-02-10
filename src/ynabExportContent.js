@@ -3,23 +3,27 @@
  * Extrai conteúdo YNAB da seleção e gera um arquivo para download
  */
 var ynabExportSelectionText = function (selectionText) {
-    console.log("ynabExportSelectionText: " + selectionText);
+    /** Uncomment to debug ** /
+    console.debug();
+    /**/
 
-    //Extrai a partir dos elementos selecionados
+    /** Extrai a partir dos elementos selecionados **/
     var selectionNodes = Utils.getSelectionNodes();
     var ynabContent = YNAB.extractYNABContentFromSelectedElements(selectionNodes);
+    /** Extrai a partir dos elementos selecionados **/
 
-    //Extrai a partir do texto selecionado
+    /** Extrai a partir do texto selecionado ** /
     //TODO Não esta funcionando
-    //var windowSelection = window.getSelection();
-    //var selectionElement = undefined;
-    //if(windowSelection) {
-    //    selectionElement = windowSelection.anchorNode;
-    //}
-    //var ynabContent = YNAB.extractYNABContent(selectionText, selectionElement);
+    var windowSelection = window.getSelection();
+    var selectionElement = undefined;
+    if(windowSelection) {
+        selectionElement = windowSelection.anchorNode;
+    }
+    var ynabContent = YNAB.extractYNABContent(selectionText, selectionElement);
+    /** Extrai a partir do texto selecionado **/
 
-    Utils.download(ynabContent);
-}
+    Utils.download(ynabContent, 'text/csv');
+};
 
 
 /*
