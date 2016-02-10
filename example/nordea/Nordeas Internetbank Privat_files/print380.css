@@ -1,0 +1,244 @@
+/*	
+        print.css		v3.8
+	Author:			Nordea
+	Owner:			Nordea
+	Date:			15.03.2013
+*/
+
+/* ******** Common classes ********* */
+body             {width: 98%; font: 9pt "Arial", Times New Roman, Georgia, Utopia, serif; color: #000; background: #fff; margin: 0; padding: 0;}
+h1, 
+h2, 
+h3, 
+h4,
+h5, 
+h6               {font-family: "Arial", Times New Roman, Georgia, Utopia, serif; margin: 10px 0 10px 0; padding: 0;}
+h1               {font-size: 16pt;}
+h2               {font-size: 14pt;}
+h3               {font-size: 12pt;}
+h4, h5, h6       {font-size: 9pt;}
+
+iframe           {width: 660px !important;}
+
+/* ******* Generic classes ******** */
+.floatright      {float: right;}
+.break           {page-break-after: always;}
+
+/* ******* Allways hide these from prints ******** */
+.nodisplay,
+.noprint,
+.barlink,
+th a img,
+#tabsC-out,
+#tabsC, 
+#tracker,
+div.print,
+table.print_bottom {display: none;}
+
+/* ****** NG Solo Private specific selectors ********* */
+
+/* ******** A area ********** */
+#printTop        {display: block; border-bottom: 1px solid #000; width: 100%; margin-bottom: 30px; padding-bottom: 20px; height: 50px;}
+#printLogo       {float: left; width: 150px;}
+#printText       {float: right; margin: 0 0 0 150px; white-space: nowrap; vertical-align: top;}
+#printNavi, 
+#top-out,
+#top-out-popup,
+.a               {display: none;}
+
+/* ******** B menu area ********** */
+.b               {display: none;}
+
+/* ******** Toolbar area ********** */
+.tb              {display: none;}
+
+/* ******** C+D content area ********** */
+.cd              {width: 100%;}
+
+/* tables */
+h3.bar1          {padding: 0 0 10px 0; margin: 0; background: #fff;}
+.bar1 img,
+.bar4 img        {display: none;}
+.tborder1, 
+.tborder2, 
+.tborder3,        
+.tborder4        {margin: 0 0 20px 0; border-collapse: collapse; vertical-align: top;}
+.tborder1 p, 
+.tborder2 p, 
+.tborder3 p,
+.tborder4 p      {margin: 5px; vertical-align: top;}
+.tborder1 table, 
+.tborder2 table, 
+.tborder3 table,
+.tborder4 table  {border: 1px solid #ccc; margin: 0 0 20px 0; border-collapse: collapse; vertical-align: top;}
+.tborder1 table table, 
+.tborder2 table table, 
+.tborder3 table table,
+.tborder4 table table  {border: 0; vertical-align: top;}
+table            {border-collapse: collapse; vertical-align: top; color: #000;}
+thead            {display: table-header-group; vertical-align: top;}
+table.bordered1, 
+table.bordered2, 
+table.bordered3  {border-collapse: collapse; vertical-align: top;}
+.odd1 th,  
+.odd2 th,
+.odd3 th,
+.odd4 th, 
+.even th         {border-bottom: 2px solid #999; background: #fff; padding: 3px 5px 3px 5px; vertical-align: top;}
+.odd1 td, 
+.odd2 td,
+.odd3 td,
+.odd4 td, 
+.even td         {background: #fff; border-bottom: 1px solid #ccc; padding: 3px 5px 3px 5px; vertical-align: top;}
+.odd1 td td, 
+.odd2 td td, 
+.even td td      {background: #fff; border: 0; vertical-align: top;}
+.linebelow1, 
+.linebelow2, 
+.linebelow3      {background: #fff; border-bottom: 1px solid #ccc;}
+td.cd, 
+tr		         {vertical-align: top;} 
+.cd a:link,
+.cd a:visited    {text-decoration: none; color: #000;}
+.fieldset td, 
+.info td, 
+.details td	     {border: 0;} 
+.buttonsright, 
+.button          {display: none;}
+
+/* status- and infoboxes */
+.boxborders	{border: 1px solid #ccc; margin: 0 0 20px 0; border-collapse: collapse; vertical-align: top;}
+
+/* reports and flags */
+div.small {font-size: 85%;}
+.tdflag_small {margin: 0 5px -2px 0;}
+.tdflag {margin: 0 5px -2px 0;}
+td.first_report {padding-left: 20px;}
+p.report_header {text-align: right; padding-top: 8px;}
+
+/* *** EDIT SHORTCUTS *** */
+td.edit .links   {padding: 5px; border: 1px solid #ccc;}
+td.edit a:link, 
+td.edit a:active,  
+td.edit a:visited,  
+td.edit a:hover  {text-decoration: none; display: block; margin-bottom: 3px;}
+td.edit img      {margin-right: 5px;}
+
+/* *** TABS *** */
+.tab a:link, 
+.tab a:visited   {text-decoration: none; color: #000;}
+.activetab, 
+.activetabi, 
+.passivetab, 
+.passivetabi     {background-color: #fff;}
+.passivetab, 
+.activetab       {border-top: 1px solid #ccc; padding: 2px 5px 0px 5px;}
+.notab, 
+.passivetab, 
+.passivetabi, 
+.activetab, 
+.activetabi      {border-bottom: 1px solid #ccc;}
+.tabborder       {color: #999; background-color: #fff; border: 2px solid #999; border-top: 0; padding: 8px 0;}
+.tabborder       {border-collapse: collapse;}
+.tab tr th       {border: 0;}
+.notab img       {display: none;}
+
+/* ****** ERROR BOXES ****** */
+.er, 
+.erf, 
+.info            {padding: 5px; margin-bottom: 10px; border: 1px solid #ccc;}
+
+/* ****** UNCONFIRMED PAYMENTS BOX ****** */
+.unconfirmedbox  {float: right; white-space:nowrap;}
+
+/* ******** FOOTER ********** */
+.fb              {width: 1%;}
+.fb a,
+.fb_login a, 
+.fm a, 
+.fm_login a,
+.fcd,
+.fcd_login       {display: none;}
+.footerimg 	 {display: none;}
+#printFooter     {display: block; border-top: 1px solid #000; margin: 30px 0 0 0; padding: 10px 0 0 0; text-align: center;}
+
+/* ******** POP UP HELPS ********** */
+
+.bc a:link,.bc a:visited {text-decoration: none; color: #000;}
+.link_collection h2 {font-size: 12pt;}
+.link_collection img {border: 0;}
+.link_collection ul {list-style-type: none;}
+
+/* ******** CLASSIC RECEIPTS ********** */
+
+.headline {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+.type {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000000;
+}
+.text {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 16px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+}
+.underline {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 16px;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #000000;
+}
+.footer1 {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+.footer2 {
+	font-family: "Times New Roman", Times, Georgia, serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+}
+.classicTable {
+    border-collapse: separate;
+}
+
+
+/* ******** skip link ********** */
+
+#skiplinkholder a {display: none;}
+
+/* ******** time out ********** */
+
+#mcp_tw_overlay, #mcp_tw_overlay_white, #mcp_tw_content {display: none;}
+
+/* ******** infolayers ********* */
+
+.white_div,
+.transparent_40, 
+.white_div_left, 
+.white_div_center, 
+.transparent_60, 
+.transparent_70, 
+#cancel_confirmation, 
+.greybackbutton {display: none;}
+
+/* ******* Hidden on the screen, visible on the printed page ******* */
+
+nodisplayonthescreen {margin: 0 0 20px 0; border-collapse: collapse; vertical-align: top;}
+
+img.icon_list {border: 0;}

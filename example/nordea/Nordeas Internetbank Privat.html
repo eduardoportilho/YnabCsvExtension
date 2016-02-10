@@ -1,0 +1,4452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0291)https://internetbanken.privat.nordea.se/nsp/core?usecase=accountsoverview&command=getcurrenttransactions&guid=BAyZJ9H3Vv2cl6b4jRU5vACC&commandorigin=0.viewaccountsfrontpage&fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&currentaccountsoverviewtable=0&hash=CyAR9YlaN1RRJLfjTY7ntgCC -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="se" lang="se"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<title>Nordeas Internetbank Privat</title>
+<link rel="stylesheet" media="screen" href="./Nordeas Internetbank Privat_files/nordeapn4130.css" type="text/css">
+<link rel="stylesheet" href="./Nordeas Internetbank Privat_files/print380.css" type="text/css" media="print">
+
+
+       <link rel="stylesheet" href="./Nordeas Internetbank Privat_files/datepicker-ui.css" type="text/css">
+
+
+
+	<script type="text/javascript">
+		<!--
+			if (top.location!= self.location) {
+				top.location = self.location.href
+			}
+		//-->
+	</script>
+
+
+
+<script type="text/javascript">
+<!--
+function framePrint(SOLOWORK){
+
+	if (parent[SOLOWORK] == null) {
+		window.print();
+	}
+ 	else {
+ 		parent[SOLOWORK].focus();
+ 		parent[SOLOWORK].print();
+	}
+}
+
+function showContentAreaPrintLinkTop(localisedLinkText) {
+	document.write("<div class=\"print\"><table class=\"noprint\"><tr><td><a href=\"\" onClick='window.print();return false;'><img src=\"general/images/print.gif\" alt=\"\" class=\"print_icon\" /></a></td><td><a href=\"\" onClick='window.print();return false;'>" + localisedLinkText + "</a></td></tr></table></div>");
+}
+
+function showContentAreaPrintLinkBottom(localisedLinkText) {
+	document.write("<table class=\"print_bottom noprint\"><tr><td><a href=\"\" onClick='window.print();return false;'><img src=\"general/images/print.gif\" alt=\"\" class=\"print_icon\" /></a></td><td><a href=\"\" onClick='window.print();return false;'>" + localisedLinkText + "</a></td></tr></table>");
+}
+
+
+function parseScript(source) {
+  var scripts = new Array();
+  // Strip out tags
+  while (source.indexOf("<script") > -1 || source.indexOf("</script") > -1) {
+    var s = source.indexOf("<script");
+    var s_e = source.indexOf(">", s);
+    var e = source.indexOf("</script", s);
+    var e_e = source.indexOf(">", e);
+    // Add to scripts array
+    scripts.push(source.substring(s_e+1, e));
+    // Strip from source
+    source = source.substring(0, s) + source.substring(e_e+1);
+  }
+
+  // Loop through every script collected and eval it
+  for (var i=0; i<scripts.length; i++) {
+    try {
+     eval(scripts[i]);
+    } catch (ex) {
+    }
+  }
+  // Return the cleaned source
+  return source;
+}
+
+// -->
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	sfHover = function() {
+		var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+		for (var i=0; i<sfEls.length; i++) {
+			sfEls[i].onmouseover=function() {
+				this.className+=" sfhover";
+			}
+			sfEls[i].onmouseout=function() {
+				this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+			}
+		}
+	}
+	if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+	//--><!]]>
+</script>
+
+
+<script type="text/javascript" src="./Nordeas Internetbank Privat_files/mcp_timeout_warning.js"></script>
+
+
+
+
+</head>
+<body onload="justdoit()">
+
+
+
+
+
+
+
+<!-- ******** Printable area ********* -->
+<div id="printTop">
+  <div id="printLogo"><img src="./Nordeas Internetbank Privat_files/logoprint.gif" alt="Nordea logotype" width="180" height="39"></div>
+  <div id="printText">
+  		<p>Utskriven av kund&nbsp;2016.02.09 18:14:41</p>
+  	</div>
+</div>
+<!-- /******** Printable area ********* -->
+
+<!--  need to confirm -->
+
+
+<table cellpadding="0" cellspacing="0" width="100%">
+<!-- A-area -->
+<tbody><tr><td colspan="3" id="wrap">
+
+
+
+
+
+
+<script type="text/javascript">
+ 	function create_pagetitle(server){
+		// Create Page Title and Content Groups
+		var ix = 0;
+
+		//<![CDATA[
+			var cg_n = "PN - ";
+
+		// Initialize the groups so they are not NULL
+			var cg_s = "";
+			var cg_s3 = "";
+			var cg_s4 = "";
+			var cg_s5 = "";
+		// Top level
+		var top_link = document.getElementById("current").getElementsByTagName("a")[0];
+	    var tl = top_link.innerHTML;
+	    // Test if we have an image in the link, if so leave it out
+	    if (tl.indexOf("IMG") != -1)
+    		cg_n += tl.slice(tl.indexOf(">")+1,tl.length);
+   		else
+	    	cg_n += tl;
+		//]]>>
+		//Bottom level, use as handle to access all layers. In case Bottom Level = a-menu item (currentpage undefined), top and bottom link are the same.
+		var bottom_link = "";
+		if (document.getElementById("currentpage") == undefined)
+			bottom_link = top_link;
+		else
+			bottom_link = document.getElementById("currentpage");
+		//Access all the layers
+		switch (bottom_link.parentNode.className){
+			case "sublevel":
+				//<![CDATA[
+					cg_s=bottom_link.innerHTML;
+				//]]>>
+				break;
+
+			case "indentedsublevel":
+				//Find the last anchor tag before the node switches from "sublevel" to "indentedsublevel"
+				ix = get_lastanchor(bottom_link.parentNode.parentNode);
+				//<![CDATA[
+					cg_s=bottom_link.parentNode.parentNode.getElementsByTagName("a")[ix].innerHTML;
+					cg_s3=bottom_link.innerHTML;
+				//]]>>
+				break;
+
+			case "doubleindentedsublevel":
+				//Find the last anchor tag before the node switches from "sublevel" to "indentedsublevel"
+				ix = get_lastanchor(bottom_link.parentNode.parentNode);
+				//<![CDATA[
+					cg_s=bottom_link.parentNode.parentNode.getElementsByTagName("a")[ix].innerHTML;
+				//]]>>
+				//The div at the "indentedsublevel" is a sibling to the "doubleindentedsublevel" div
+				var sib = get_previoussibling(bottom_link.parentNode);
+				ix = sib.getElementsByTagName("a").length - 1;
+				//<![CDATA[
+					cg_s3=sib.getElementsByTagName("a")[ix].innerHTML;
+					cg_s4=bottom_link.innerHTML;
+				//]]>>
+				break;
+		}
+		// Create Page Title from Content Groups
+
+		//<![CDATA[
+			var ti = cg_n;
+			if (cg_s != "")
+			   ti += " - " + cg_s;
+			if (cg_s3 != "")
+				ti += " - " + cg_s3;
+			if (cg_s4 != "")
+				ti += " - " + cg_s4;
+			if (cg_s5 != "")
+				ti += " - " + cg_s5;
+		//]]>>
+		if (window.dcsMultiTrack) {
+			dcsMultiTrack('DCS.dcsuri', window.location.pathname ,'WT.ti', 'Logout' ,'DCSext.logout','1', 'DCSext.wtexclude', 'logout');
+		}
+	}
+
+
+	//Help function to find the element node, previousSibling provides different results in different browsers
+	function get_previoussibling(n){
+		x=n.previousSibling;
+		while (x.nodeType!=1)
+		{
+		  x=x.previousSibling;
+		}
+		return x;
+	}
+
+	//Help function to find the last anchor tag before a new div-level, that anchor tag contains the breadcrum for that level
+	function get_lastanchor(node){
+		var classname=node.getElementsByTagName("a")[0].parentNode.className;
+		var ix=0;
+		var i=0;
+		for (i=0; i<node.getElementsByTagName("a").length;i++){
+			if (classname != node.getElementsByTagName("a")[i].parentNode.className)
+				return ix;
+			else
+				ix=i;
+		}
+	}
+</script>
+
+
+
+<!-- ********* Section TOP *********** -->
+<div id="top-out">
+<div id="top">
+
+<!-- ********** Section LOGO ********** -->
+<div id="logo-out">
+<div id="logo">
+
+
+
+
+
+
+    <a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=base&amp;command=go_to_user_start_page_command&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topcellcontainerview&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;pageid=SoloDailyEconomyPage&amp;hash=6idhAjM8YVdwvNpSgRWLpQCC"><img src="./Nordeas Internetbank Privat_files/logo_nordea.gif" id="logo_nordea" width="85" height="18" alt="Till hemsidan"></a>
+
+</div>
+</div>
+
+<!-- ********** Section SITE TITLE ********** -->
+
+    <div id="title-out" style="width: 35%;">
+
+    <div id="title">
+
+    <img src="./Nordeas Internetbank Privat_files/title_nordea.gif" id="title_nordea" alt="Internetbanken">
+
+
+
+</div>
+</div>
+
+
+<!-- ********** Section Customer group ********** -->
+<div id="cp-out" style="float: left;">
+<div id="cp" style="padding: 4px 0 0 0;">
+<img src="./Nordeas Internetbank Privat_files/CustomerProgram_1002.gif" id="CustomerProgram_1002" width="198" height="30" alt="Customer program">
+</div>
+</div>
+
+
+
+<!-- ********** Section LOG OUT BUTTON ********** -->
+<form action="https://internetbanken.privat.nordea.se/nsp/engine" method="POST" enctype="application/x-www-form-urlencoded" name="log_out_link" id="log_out_link" accept-charset="ISO-8859-15"><input type="hidden" name="usecase" value="base"><input type="hidden" name="command" value="formcommand"><input type="hidden" name="guid" value="LgOoDqZS1wimKsm2hyC80ACC"><input type="hidden" name="commandorigin" value="0.topcellcontainerview"><input type="hidden" name="fpid" value="kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx"><input type="hidden" name="hash" value="f300ZQipNWlIpDCA16C7ogCC">
+<div id="solobtn-out">
+
+	<div id="log_out" style="white-space: nowrap;">
+
+<p>
+
+	<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=base&amp;command=logout&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topcellcontainerview&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=BoVZARgsrLpBA5ok8bZFKgCC" id="log_out_button" onclick="create_pagetitle(&#39;https://internetbanken.privat.nordea.se:443/nsp/core&#39;)">&nbsp;&nbsp;&nbsp;Logga ut&nbsp;&nbsp;&nbsp;</a>
+</p>
+
+</div>
+</div>
+</form>
+
+
+
+
+
+
+
+<!-- Tool bar -->
+<!-- ************* Section MAINNAVIGATION ************* -->
+<div id="mainNavigation-out">
+<div id="mainNavigation">
+
+<!-- ************ Section TOOLBAR ********** -->
+<div id="toolbar-out">
+<div id="toolbar_for_shortcuts">
+
+	<div id="container">
+	<ul id="nav">
+<li class="nocolor_last"><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=232&amp;hash=OB46dt8988JM4ymJjZakAwCC#">Kontakta oss</a></li>
+<li class="nocolor"><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=base&amp;command=newwindow&amp;guid=BAyZJ9H3Vv2cl6b4jRU5vACC&amp;wid=2&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=233&amp;winusecase=menu&amp;wincommand=openmenu&amp;prwnd=0&amp;hash=uZi6bCNDIZiI4WSQVH9AlACC#" target="_blank">Hj�lp</a></li>
+<li class="genvag"><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accountsoverview&amp;command=getcurrenttransactions&amp;guid=BAyZJ9H3Vv2cl6b4jRU5vACC&amp;commandorigin=0.viewaccountsfrontpage&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;currentaccountsoverviewtable=0&amp;hash=CyAR9YlaN1RRJLfjTY7ntgCC#">Genv�gar<img class="arrowdown" src="./Nordeas Internetbank Privat_files/p_arrowdown.gif" alt=""></a>
+<ul class="select-free">
+<li><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=newpayment&amp;command=donewpaymentSE&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=g4lZ9lN3iA94X18H6VYpzACC">Betalning PG/BG</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=productsoverview&amp;command=allproducts&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=AAudUi6vRM6kHaK0NIkfpQCC">�versikt</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=newpayment&amp;command=donew3partytransfer&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=uRpVyimnAI9aJqgm61jqAACC">�verf�ring andra konton</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=newtransfer&amp;command=donewtransferSE&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=lsXwAIuRbdfE5VBHkYPFKACC">�verf�ring eget konto</a></li>
+<li>&nbsp;</li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=myshortcuts&amp;command=personalize&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.toolbar_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=gShZuajtBJAn1eIl5zAq3ACC">Redigera genv�gar</a></li>
+</ul>
+</li>
+</ul>
+
+	</div>
+</div>
+</div>
+
+
+
+<!-- ************* Section TABS ************** -->
+<div id="tabs-out">
+<div id="tabs">
+<ul>
+<li id="current"><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=238&amp;hash=AdeRPyMfVrznfAPKcUFndwCC#"><img src="./Nordeas Internetbank Privat_files/home.gif" alt="Vardags�renden" id="home">Vardags�renden</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;start=%2Foetpn%2Fpnse%2Foverview&amp;menuid=240&amp;hash=8UO5Jnz0yAUQ07TI2GuEPACC#">Spara och placera</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=241&amp;hash=m5AloWSWAb2dCNxmGRdr5wCC#">L�n</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=242&amp;hash=KuobFE0jTECcJvB38KKM8ACC#">Skadef�rs�kringar</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=243&amp;hash=awV0wU1f9w8OlTmFWS1KYwCC#">Information och r�d</a></li>
+<li><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.topnavigation_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=244&amp;hash=ApGNzjvNHoX0G4Oc7znliwCC#">Inst�llningar</a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<div id="padding"></div>
+
+<!-- End of mainNavigation -->
+<!-- End of top -->
+
+<!-- /A-area -->
+</td></tr>
+<!-- BCD area -->
+<tr>
+	<td class="b"><div>
+
+<!-- rootmenu starts -->
+<div class="sublevel">
+<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=130&amp;hash=HoTJAj5EINrqgaBp5e7PnwCC#">Betala och �verf�ra<img src="./Nordeas Internetbank Privat_files/p_arrowright_light_12x9.gif" alt="Betala och �verf�ra"></a>
+<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=138&amp;hash=bxIdkvRgo2XQxqyJhXqmWQCC#">Konton<img src="./Nordeas Internetbank Privat_files/p_arrowright_light_12x9.gif" alt="Konton"></a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=144&amp;hash=At8xY9S2Vy0f5hJLNBln4ACC#">Kort<img src="./Nordeas Internetbank Privat_files/p_arrowright_light_12x9.gif" alt="Kort"></a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=145&amp;hash=TLGM07wPIq44SuPLRplCQwCC#">�versikt</a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=154&amp;hash=hhVnfTPBBVBoycu2TbtQewCC#">Mobila tj�nster<img src="./Nordeas Internetbank Privat_files/p_arrowright_light_12x9.gif" alt="Mobila tj�nster"></a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=155&amp;hash=fkYNzI6iwMa2cuXz7X0BOQCC#">Avtal</a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=156&amp;hash=TAxlpavSHBTwtJ5qhPCPugCC#">Dokument</a>
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.leftmenu_view&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=159&amp;hash=jbloEAWffZFoAA3c6IiPugCC#">BankID<img src="./Nordeas Internetbank Privat_files/p_arrowright_light_12x9.gif" alt="BankID"></a>
+</div>
+
+<!-- rootmenu ends -->
+</div></td>
+	<td class="m_lt">&nbsp;</td>
+	<td class="cd">
+	<!-- Skip target -->
+	<p id="skiptargetholder"><a id="skiptarget" name="skiptarget" class="skip" tabindex="-1"></a></p>
+	<!-- End of skip target -->
+
+
+
+<script type="text/javascript">
+	<!--
+		showContentAreaPrintLinkTop('Skriv ut');
+	// -->
+</script><div class="print"><table class="noprint"><tbody><tr><td><a href="" onclick="window.print();return false;"><img src="./Nordeas Internetbank Privat_files/print.gif" alt="" class="print_icon"></a></td><td><a href="" onclick="window.print();return false;">Skriv ut</a></td></tr></tbody></table></div>
+
+<h1>Kontoutdrag och kontoinformation</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="validationErrorDiv">
+
+<table width="100%" cellpadding="5" cellspacing="0" class="er nodisplay" id="codeapp_error">
+    <colgroup><col width="42" valign="top">
+    </colgroup><tbody><tr>
+        <td><img src="./Nordeas Internetbank Privat_files/IncorrectInput.gif" alt="Error"></td>
+        <td><strong><div id="codeapp_error_text"></div></strong></td>
+    </tr>
+</tbody></table>
+</div>
+
+
+<form action="https://internetbanken.privat.nordea.se/nsp/core" method="POST" enctype="application/x-www-form-urlencoded" name="accountTransactions" id="accountTransactions" accept-charset="ISO-8859-15" target="_top" autocomplete="off"><input type="hidden" name="usecase" value="base"><input type="hidden" name="command" value="formcommand"><input type="hidden" name="guid" value="LgOoDqZS1wimKsm2hyC80ACC"><input type="hidden" name="commandorigin" value="0.ucaccounttransactionstabcw"><input type="hidden" name="fpid" value="kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx"><input type="hidden" name="hash" value="Jo79gNNAghjeY4DJ4FUykQCC">
+	<input type="hidden" name="defaultcommand" value="accounttransactions$getnewaccounttransactions">
+
+
+
+
+
+
+
+<br class="iebug">
+<div id="tabsC-out">
+<div id="tabsC">
+<ul>
+
+
+
+        <li id="current"><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=transactions&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.ucaccounttransactionstabcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;transactionstab=0&amp;hash=9XA9rw3xy2AO0sPVaCgn3QCC">Kontoutdrag</a>
+        </li>
+
+
+
+        <li><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=transactions&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.ucaccounttransactionstabcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;transactionstab=1&amp;hash=dYRGf7SH1hIvWbppbB75OQCC">Kontoinformation</a>
+        </li>
+
+
+        <li><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=transactions&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.ucaccounttransactionstabcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;transactionstab=2&amp;hash=tzfxQ8paGrNMPPcTBAu66wCC">S�k och kategorisera</a>
+        </li>
+
+
+
+</ul>
+
+
+      	<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;wid=1&amp;commandorigin=0.ucaccounttransactionstabcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=14&amp;hash=rzAFKtPAeItGYtObLAAcbwCC" class="notab" target="help"><img src="./Nordeas Internetbank Privat_files/b_help.gif" width="17" height="14" class="er_icon_r" style="MARGIN-TOP: 3px; MARGIN-RIGHT: 8px" alt="Help"></a>
+
+
+
+</div>
+</div>
+
+
+
+<div class="tabborder">
+  	<!-- TransLista SearchPart MAIN_PAGE-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  BASIC SEARCH: acct_trans_search_input_basic.jsp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var doselectsubmit = false;
+function autoSelect(curForm, command)
+{
+ //curForm.name = command;
+ if (curForm.defaultcommand)
+ 	curForm.defaultcommand.value = command;
+ curForm.submit();
+}
+function checkSelectClick(curForm)
+{
+ if (doselectsubmit == true){
+     doselectsubmit = false;
+     curForm.submit();
+ } else {
+  doselectsubmit = true
+ }
+}
+</script>
+
+
+
+<table width="100%" cellpadding="5" cellspacing="0" class="er nodisplay" id="codeapp_error">
+    <colgroup><col width="42" valign="top">
+    </colgroup><tbody><tr>
+        <td><img src="./Nordeas Internetbank Privat_files/IncorrectInput.gif" alt="Error"></td>
+        <td><strong><div id="codeapp_error_text"></div></strong></td>
+    </tr>
+</tbody></table>
+
+
+
+	<table cellpadding="2" border="0" cellspacing="0" width="100%">
+		<colgroup span="3">
+			<col class="first" align="left" width="25%">
+			<col align="left" width="2%">
+			<col align="left" width="3%">
+			<col align="left" class="last" width="73%">
+		</colgroup>
+
+		<tbody><tr>
+			<td colspan="4">&nbsp;</td>
+		</tr>
+
+
+		<tr>
+		   	<td class="first" align="left"><label for="transactionaccount">Konto</label>:</td>
+		   	<td colspan="3" align="left">
+			   	<select name="transactionaccount" id="transactionaccount" onclick="checkSelectClick(document.accountTransactions);" onchange="autoSelect(document.accountTransactions,  	  &#39;accounttransactions$getnewaccounttransactions&#39;);"><option selected="selected" value="0">
+		      		Personkonto&nbsp;&nbsp;&nbsp;&nbsp;800712-9136&nbsp;&nbsp;&nbsp;&nbsp;36.265,06
+				</option></select>&nbsp;
+			    <noscript>&lt;input name="accounttransactions$basicsearchtransactions" class="button" type="submit" value="&amp;nbsp;&amp;nbsp;Forts�tt&amp;nbsp;&amp;nbsp" /&gt;</noscript>
+			</td>
+	    </tr>
+
+
+
+
+		<tr>
+		    <td class="first" align="left">Saldo:</td>
+
+			    <td class="nowrap">XXXXXXXX</td>
+	            <td class="nowrap">SEK</td>
+				<td>&nbsp;</td>
+
+			</tr>
+
+			<tr>
+			    <td class="first" align="left">Att disponera:</td>
+
+	        	    <td>XXXXXXXX</td>
+	        		<td>SEK</td>
+	                <td>&nbsp;</td>
+
+			</tr>
+
+			<tr>
+
+			</tr>
+
+			<tr>
+
+			</tr>
+
+			<tr>
+				<td class="first" align="left">Datum:</td>
+				<td colspan="3" align="left">
+		  			<select name="transactionPeriod" id="transactionPeriod" onclick="checkSelectClick(document.accountTransactions);" onchange="autoSelect(document.accountTransactions, &#39;accounttransactions$getnewaccounttransactions&#39;);"><option value="0">
+
+					        Senaste 3 m�naderna
+
+				    </option><option value="1">
+
+					        Februari 2016
+
+				    </option><option value="2">
+
+					        Januari 2016
+
+				    </option><option value="3">
+
+					        December 2015
+
+				    </option><option value="4">
+
+					        November 2015
+
+				    </option><option value="5">
+
+					        Oktober 2015
+
+				    </option><option value="6">
+
+					        September 2015
+
+				    </option><option value="7">
+
+					        Augusti 2015
+
+				    </option><option value="8">
+
+					        Juli 2015
+
+				    </option><option value="9">
+
+					        Juni 2015
+
+				    </option><option value="10">
+
+					        Maj 2015
+
+				    </option><option value="11">
+
+					        April 2015
+
+				    </option><option value="12">
+
+					        Mars 2015
+
+				    </option><option value="13">
+
+					        Februari 2015
+
+				    </option><option value="14">
+
+					        Januari 2015
+
+				    </option><option value="15">
+
+					        December 2014
+
+				    </option><option value="16">
+
+					        November 2014
+
+				    </option><option value="17">
+
+					        Oktober 2014
+
+				    </option><option value="18">
+
+					        September 2014
+
+				    </option><option value="19">
+
+					        Augusti 2014
+
+				    </option><option value="20">
+
+					        Juli 2014
+
+				    </option><option value="21">
+
+					        Juni 2014
+
+				    </option><option value="22">
+
+					        Maj 2014
+
+				    </option><option value="23">
+
+					        April 2014
+
+				    </option><option value="24">
+
+					        Mars 2014
+
+				    </option><option value="25">
+
+					        Februari 2014
+
+				    </option><option value="26">
+
+					        Januari 2014
+
+				    </option><option value="27">
+
+					        December 2013
+
+				    </option><option value="28">
+
+					        November 2013
+
+				    </option><option value="29">
+
+					        Oktober 2013
+
+				    </option><option value="30">
+
+					        September 2013
+
+				    </option><option value="31">
+
+					        Augusti 2013
+
+				    </option><option value="32">
+
+					        Juli 2013
+
+				    </option><option value="33">
+
+					        Juni 2013
+
+				    </option><option value="34">
+
+					        Maj 2013
+
+				    </option><option value="35">
+
+					        April 2013
+
+				    </option><option value="36">
+
+					        Mars 2013
+
+				    </option><option value="37">
+
+					        Februari 2013
+
+				    </option></select>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="4"><br></td>
+			</tr>
+	  </tbody></table>
+
+
+
+
+</div>
+
+
+
+
+
+        <br>
+
+
+
+</form>
+
+
+
+
+
+	<!-- WiSu-Documentum.START -->
+
+
+
+
+
+	<!-- WiSu-Documentum.END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- WiSu-Documentum.START -->
+
+
+
+
+
+
+
+
+
+
+				<!-- WiSu-Documentum.END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="bar1">
+<a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=menu&amp;command=openmenu&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;wid=1&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;menuid=14&amp;hash=arFrDHNAXg9BpgAQEvaTTACC" target="help"><img src="./Nordeas Internetbank Privat_files/b_help.gif" width="17" height="14" alt="Help"></a>
+Transaktioner
+</h3>
+<div class="tborder1">
+
+		<form action="https://internetbanken.privat.nordea.se/nsp/core" method="POST" enctype="application/x-www-form-urlencoded" name="accountTransactionsRowForm" id="accountTransactionsRowForm" accept-charset="ISO-8859-15" target="_top" autocomplete="off"><input type="hidden" name="usecase" value="base"><input type="hidden" name="command" value="formcommand"><input type="hidden" name="guid" value="LgOoDqZS1wimKsm2hyC80ACC"><input type="hidden" name="commandorigin" value="0.account_transactions"><input type="hidden" name="fpid" value="kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx"><input type="hidden" name="hash" value="Jo79gNNAghjeY4DJ4FUykQCC">
+			<table id="transactionstable" cellpadding="2" cellspacing="0" border="0" width="100%">
+				<colgroup span="7">
+
+						<col class="first">
+
+
+
+							<col align="left" width="13%">
+
+
+							<col align="left" width="30%">
+
+
+							<col align="left" width="18%">
+
+
+							<col align="right" width="18%">
+
+
+							<col align="right" width="18%">
+
+
+
+
+
+
+						<col class="last" align="right">
+
+				</colgroup>
+
+
+
+
+
+
+
+<tbody><tr class="even noprint">
+	<td class="first" colspan="4">
+
+		Markera:
+		<a href="javascript:toggle_checked(true)">Alla</a>
+		<a href="javascript:toggle_checked(false)">Inga</a>
+		&nbsp;&nbsp;
+
+		<select name="set_category_dropdown_first" id="set_category_dropdown_first"><option value="0">V�lj kategori...</option><option value="1">
+
+			Ta bort kategori
+		</option><option value="2">
+
+			B�t
+		</option><option value="3">
+
+			Bil
+		</option><option value="4">
+
+			Barn
+		</option><option value="5">
+
+			Kl�der
+		</option><option value="6">
+
+			Fritidshus
+		</option><option value="7">
+
+			Livsmedel
+		</option><option value="8">
+
+			Boende
+		</option><option value="9">
+
+			Personf�rs�kring
+		</option><option value="10">
+
+			Fritid/Hobby/N�jen
+		</option><option value="11">
+
+			Sparande
+		</option><option value="12">
+
+			Sjukv�rd/Tandl�kare
+		</option><option value="13">
+
+			TV/Tidningar
+		</option><option value="14">
+
+			Semester
+		</option><option value="15">
+
+			Telefoni/Bredband
+		</option><option value="16">
+
+			�vrigt
+		</option></select>
+		&nbsp;
+		<input name="accounttransactions$updatecategory_first" class="button" type="submit" value="��Spara��">
+	</td>
+
+</tr>
+<!-- -->
+
+
+
+				<!-- Header.start -->
+				<tr class="odd1">
+
+						<th class="first" align="left">&nbsp;</th>
+
+
+
+								<th align="left">Datum</th>
+
+
+
+								<th align="left">Transaktion</th>
+
+
+
+								<th align="left">Kategori</th>
+
+
+
+								<th class="last forceright">Belopp</th>
+
+
+
+								<th class="last forceright">Saldo</th>
+
+
+
+
+
+
+
+
+
+						<th class="last">&nbsp;</th>
+
+				</tr>
+				<!-- Header.end -->
+
+
+
+				<tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id0_exist" value="true"><input type="checkbox" name="checked_trans_id0" id="checked_trans_id0" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.23.254335%7CN&amp;hash=D0q752DH87hNkob6awBVlgCC">Kortk�p 160207 SL SLUSSEN X T BANA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-790,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								36.265,06
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id1_exist" value="true"><input type="checkbox" name="checked_trans_id1" id="checked_trans_id1" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.23.253628%7CN&amp;hash=EIqPxfclyUZ6wfuUD3Z4HQCC">Kortk�p 160207 SL SLUSSEN X T BANA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-790,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								37.055,06
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id2_exist" value="true"><input type="checkbox" name="checked_trans_id2" id="checked_trans_id2" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.23.252529%7CN&amp;hash=1gBa43dbgbwiq00nzApH4ACC">Kortk�p 160207 ICA KVANTUM AKERSBER</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-411,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								37.845,06
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id3_exist" value="true"><input type="checkbox" name="checked_trans_id3" id="checked_trans_id3" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.23.251585%7CN&amp;hash=jYiBiVrfsqcr74NRglYHjQCC">Kortk�p 160207 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-96,60
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.256,06
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id4_exist" value="true"><input type="checkbox" name="checked_trans_id4" id="checked_trans_id4" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.23.249761%7CN&amp;hash=gj5qaf6bdSpx7QMAT4j9tACC">Kortk�p 160206 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-18,40
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.352,66
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id5_exist" value="true"><input type="checkbox" name="checked_trans_id5" id="checked_trans_id5" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-09
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0900000080071291362016-02-09-16.14.22.223198%7CN&amp;hash=2A3EXyqBkSv0uDoA4SwBtgCC">Kortk�p 160206 Viaporin Deli Oy</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-186,01
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.371,06
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id6_exist" value="true"><input type="checkbox" name="checked_trans_id6" id="checked_trans_id6" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.939977%7CN&amp;hash=0BXWje7ACRbOPhH2AguZxgCC">Kortk�p 160205 BUCO NERO</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-95,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.557,07
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id7_exist" value="true"><input type="checkbox" name="checked_trans_id7" id="checked_trans_id7" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.938678%7CN&amp;hash=IEVlia00JIY3B4mniYKr6QCC">Kortk�p 160205 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-82,80
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.652,07
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id8_exist" value="true"><input type="checkbox" name="checked_trans_id8" id="checked_trans_id8" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.936388%7CN&amp;hash=kjOIV5kdqYIRoekZOTTlSACC">Kortk�p 160206 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-78,20
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.734,87
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id9_exist" value="true"><input type="checkbox" name="checked_trans_id9" id="checked_trans_id9" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.935055%7CN&amp;hash=sWN7YPbzuJSi9MagBKwWRwCC">Kortk�p 160205 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-55,20
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.813,07
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id10_exist" value="true"><input type="checkbox" name="checked_trans_id10" id="checked_trans_id10" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.934171%7CN&amp;hash=AEoTjNfIBz9TpJySBkGKugCC">Kortk�p 160205 M S MARIELLA</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-188,60
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								38.868,27
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id11_exist" value="true"><input type="checkbox" name="checked_trans_id11" id="checked_trans_id11" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-16.31.15.929434%7CN&amp;hash=1X8NiJeuE901JisAQX0IdgCC">Kortk�p 160206 HSL Kauppatori</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-95,88
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								39.056,87
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id12_exist" value="true"><input type="checkbox" name="checked_trans_id12" id="checked_trans_id12" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-08
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0800000080071291362016-02-08-09.54.11.154280%7CN&amp;hash=CUq6ZHUDDnjCB2HtJiivdgCC">Betalning BG 730-8596 AMERICAN EXPRESS</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-1.600,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								39.152,75
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id13_exist" value="true"><input type="checkbox" name="checked_trans_id13" id="checked_trans_id13" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-07
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0700000080071291362016-02-07-16.26.14.062024%7CN&amp;hash=mEVYj0QHe4NfX7A2AU8PLACC">contanova PILLA PORTILHO,EDUAR</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								31.300,53
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								40.752,75
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id14_exist" value="true"><input type="checkbox" name="checked_trans_id14" id="checked_trans_id14" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-04
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0400000080071291362016-02-04-12.31.14.910510%7CN&amp;hash=wGit2dWJ085ZGnB4InSL1gCC">Bankgiroins�ttning CONCUR TECHN</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								1,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.452,22
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id15_exist" value="true"><input type="checkbox" name="checked_trans_id15" id="checked_trans_id15" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-01
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0100000080071291362016-02-01-16.34.24.098320%7CN&amp;hash=80JNJ0Vq5VmP8cB8ZTcBfgCC">�verf�ring SIQUEIRA MACHADO,MAR</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								495,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.451,22
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id16_exist" value="true"><input type="checkbox" name="checked_trans_id16" id="checked_trans_id16" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-01
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0100000080071291362016-02-01-07.10.18.633426%7CN&amp;hash=53eA1EiAXU4uvdhE0gkFpQCC">Kortk�p 160128 Taxi Kurir Stockholm</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-470,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								8.956,22
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id17_exist" value="true"><input type="checkbox" name="checked_trans_id17" id="checked_trans_id17" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-01
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0100000080071291362016-02-01-07.10.18.632341%7CN&amp;hash=GVTNLRyJqbWmEFZg551pBwCC">Kortk�p 160127 Blue Lagoon Badsvadi</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-249,23
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.426,22
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id18_exist" value="true"><input type="checkbox" name="checked_trans_id18" id="checked_trans_id18" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-01
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0100000080071291362016-02-01-07.10.18.631326%7CN&amp;hash=dJUDAXT4Cko3bvCv0qS4AQCC">Kortk�p 160127 Hreyfill 364</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-152,60
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.675,45
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id19_exist" value="true"><input type="checkbox" name="checked_trans_id19" id="checked_trans_id19" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-02-01
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-02-0100000080071291362016-02-01-07.10.18.627260%7CN&amp;hash=3hOsljFdd3sQTuQ6esGMZACC">Kortk�p 160128 Taxi Torfi</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-131,16
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.828,05
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id20_exist" value="true"><input type="checkbox" name="checked_trans_id20" id="checked_trans_id20" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-29
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2900000080071291362016-01-29-06.44.05.975104%7CN&amp;hash=pgC9BsDFAoIxBZtqRjTcOwCC">Kortk�p 160126 Kaffibarinn</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-73,52
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								9.959,21
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id21_exist" value="true"><input type="checkbox" name="checked_trans_id21" id="checked_trans_id21" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-28
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2800000080071291362016-01-28-06.43.17.051809%7CN&amp;hash=LeGFYYdlTnlaHcEg5AQ81ACC">Kortk�p 160125 Taxi Fridrik</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-262,99
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								10.032,73
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id22_exist" value="true"><input type="checkbox" name="checked_trans_id22" id="checked_trans_id22" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-28
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2800000080071291362016-01-28-06.43.17.051438%7CN&amp;hash=6TnFK0a3Vmb10mAGBurPwwCC">Kortk�p 160125 GULLFOSSKAFFI</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-339,56
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								10.295,72
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id23_exist" value="true"><input type="checkbox" name="checked_trans_id23" id="checked_trans_id23" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-28
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2800000080071291362016-01-28-06.43.17.050999%7CN&amp;hash=9ACAShLTwmiFcuhZm7fUZQCC">Kortk�p 160125 ITA Tour desk Radiss</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-223,04
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								10.635,28
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id24_exist" value="true"><input type="checkbox" name="checked_trans_id24" id="checked_trans_id24" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-28
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2800000080071291362016-01-28-06.43.17.049602%7CN&amp;hash=u7KBir40JuhSwLv4pNKClQCC">Kortk�p 160124 HALLGRIMSKIRKJ</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-119,85
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								10.858,32
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id25_exist" value="true"><input type="checkbox" name="checked_trans_id25" id="checked_trans_id25" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.478080%7CN&amp;hash=A9WSA4iresx7PB86ceV0MgCC">Kortk�p 160123 10 11 Laugavegur</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-155,29
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								10.978,17
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id26_exist" value="true"><input type="checkbox" name="checked_trans_id26" id="checked_trans_id26" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.477340%7CN&amp;hash=g4wqHxIe2VYmCAR3WzAp6QCC">Avgift utl automat 160124</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-40,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								11.133,46
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id27_exist" value="true"><input type="checkbox" name="checked_trans_id27" id="checked_trans_id27" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.476820%7CN&amp;hash=ujfIQjeylwdBiAWPuylINACC">Kontantuttag utl/aut 160124 A T M ICEL</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-277,30
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								11.173,46
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id28_exist" value="true"><input type="checkbox" name="checked_trans_id28" id="checked_trans_id28" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.476259%7CN&amp;hash=lUHveWZIScQFynyzqZSE4QCC">Kortk�p 160124 Islandia Shop Bankas</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-261,81
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								11.450,76
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id29_exist" value="true"><input type="checkbox" name="checked_trans_id29" id="checked_trans_id29" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.475598%7CN&amp;hash=uBaFJ4OoMFI31OuhA2AgEgCC">Kortk�p 160125 Hoflandsetrid</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-351,47
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								11.712,57
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id30_exist" value="true"><input type="checkbox" name="checked_trans_id30" id="checked_trans_id30" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.475116%7CN&amp;hash=BEHgeePq3b1PLsUVqhdQMgCC">Kortk�p 160125 Hreyfill 364</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-176,40
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.064,04
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id31_exist" value="true"><input type="checkbox" name="checked_trans_id31" id="checked_trans_id31" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.474444%7CN&amp;hash=xpdxDhD0HBDZXSH2rvCibQCC">Kortk�p 160124 Babalu ehf</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-97,56
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.240,44
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id32_exist" value="true"><input type="checkbox" name="checked_trans_id32" id="checked_trans_id32" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.473994%7CN&amp;hash=6HcJBoWxDAv2nkZwT53q0gCC">Kortk�p 160124 Babalu ehf</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-30,07
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.338,00
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id33_exist" value="true"><input type="checkbox" name="checked_trans_id33" id="checked_trans_id33" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-27
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2700000080071291362016-01-27-06.43.04.472011%7CN&amp;hash=KJZUjcBj9xvMiwa8C7AaIQCC">Kortk�p 160125 Tjonustum  Tingvalla</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-81,52
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.368,07
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id34_exist" value="true"><input type="checkbox" name="checked_trans_id34" id="checked_trans_id34" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-26
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2600000080071291362016-01-26-06.39.32.246792%7CN&amp;hash=H8TrnvQ9jrZovU55fXPt1gCC">Kortk�p 160123 3530 STREET FOO</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-261,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.449,59
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id35_exist" value="true"><input type="checkbox" name="checked_trans_id35" id="checked_trans_id35" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-26
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2600000080071291362016-01-26-06.39.32.246217%7CN&amp;hash=zevDllPKABncOKA0rvYL6QCC">Kortk�p 160124 Bajarins Bestu Pylsu</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-53,88
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.710,59
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id36_exist" value="true"><input type="checkbox" name="checked_trans_id36" id="checked_trans_id36" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-26
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2600000080071291362016-01-26-06.39.32.238447%7CN&amp;hash=wBZh8UaqBDvTBSTvaaGAfQCC">Kortk�p 160124 Bajarins Bestu Pylsu</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-40,42
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.764,47
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id37_exist" value="true"><input type="checkbox" name="checked_trans_id37" id="checked_trans_id37" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-25
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2500000080071291362016-01-25-07.04.47.879205%7CN&amp;hash=C333tQZyf0EFZPJ4grjXlACC">Kortk�p 160122 SHAHRZAD</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-100,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.804,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id38_exist" value="true"><input type="checkbox" name="checked_trans_id38" id="checked_trans_id38" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-23
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2300000080071291362016-01-23-12.09.27.943413%7CN&amp;hash=1Tq39I194X15m2qItOiC4ACC">Train BEZERRA FERREIRA,JOS</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								125,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.904,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id39_exist" value="true"><input type="checkbox" name="checked_trans_id39" id="checked_trans_id39" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-22
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2200000080071291362016-01-22-10.17.32.602425%7CN&amp;hash=0fiErGBHqhO0BWPUvD8AugCC">Rent Feb16 051756-5242</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								Boende
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-18.000,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								12.779,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id40_exist" value="true"><input type="checkbox" name="checked_trans_id40" id="checked_trans_id40" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-20
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2000000080071291362016-01-20-06.40.57.935485%7CN&amp;hash=5BD40nN5K9AmwfRYINI3zQCC">Kortk�p 160118 APOTEKET SHOP 205900</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-59,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								30.779,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id41_exist" value="true"><input type="checkbox" name="checked_trans_id41" id="checked_trans_id41" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-20
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2000000080071291362016-01-20-06.40.57.931647%7CN&amp;hash=139msZsvmOJU5HJu03Yf0gCC">Kortk�p 160118 BUCO NERO</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-95,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								30.838,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id42_exist" value="true"><input type="checkbox" name="checked_trans_id42" id="checked_trans_id42" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-20
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-2000000080071291362016-01-20-00.21.51.204480%7CN&amp;hash=8bR4JbqxCQNXJfNqisDGJACC">Betalning BG 5014-0045 E ON Kundsuppor</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								Fritidshus
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-2.106,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								30.933,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id43_exist" value="true"><input type="checkbox" name="checked_trans_id43" id="checked_trans_id43" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-18
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-1800000080071291362016-01-18-23.33.08.851775%7CN&amp;hash=TRtiwUG7N2tMUI67x6aR8wCC">K�p TELE2 SVERIGE AB 63588756614934</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								-50,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								33.039,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="even">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id44_exist" value="true"><input type="checkbox" name="checked_trans_id44" id="checked_trans_id44" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-17
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-1700000080071291362016-01-17-13.38.56.285681%7CN&amp;hash=qAOgSO3OA7ljx82CtwjeOACC">Conta nova PILLA PORTILHO,EDUAR</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								32.681,89
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								33.089,89
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr><tr class="odd1">
+
+
+
+
+
+
+							<td class="first" align="left">
+								<input type="hidden" name="checked_trans_id45_exist" value="true"><input type="checkbox" name="checked_trans_id45" id="checked_trans_id45" class="noprint">
+							</td>
+
+
+
+
+					<td class="nowrap" align="left">
+
+							2016-01-14
+
+					</td>
+
+
+
+
+
+						<td class="nowrap" align="left">
+
+								<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=viewtransactionsinfo&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;key=B062016-01-1400000080071291362016-01-14-15.14.08.112999%7CN&amp;hash=y5zarBVU8GQKxTQBeApcYQCC">Swish inbetalning LINO DE SOUSA,DAVID</a>
+
+						</td>
+
+
+
+
+
+
+						<td align="left">
+
+								&nbsp;
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								408,00
+
+						</td>
+
+
+
+
+
+						<td class="nowrap" align="right">
+
+								408,00
+
+						</td>
+
+
+
+						<td class="last">
+								&nbsp;
+						</td>
+
+				</tr>
+
+
+			</tbody></table>
+		</form>
+
+
+
+</div>
+
+
+
+	<p class="noprint">
+	Spara som fil:&nbsp;
+	<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=export_transactions&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;wid=1&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;output_type=tbl&amp;pipe=csv_transaction_history&amp;hash=vDjDCw2V23b8oiBoWCj1DACC">Excel</a>&nbsp;
+	<a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accounttransactions&amp;command=export_transactions&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;wid=1&amp;commandorigin=0.account_transactions&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;output_type=csv&amp;pipe=csv_transaction_history&amp;hash=enqMMzThfFHdgqR0BixB0QCC">CSV</a>
+	</p>
+
+
+	<br>
+
+
+<script>
+
+	<!-- Toggle checkboxes from check to unchecked and back -->
+	<!-- Input parameter is the checked status of the control checkbox -->
+	function toggle_checked(checked_status)
+	{
+		<!-- Shortcut to the form object. Must be inside function because the form doesn't exists earlier -->
+		var f = document.accountTransactionsRowForm;
+
+		<!-- loop through all fields in the form -->
+		for (i=0;i<f.length;i++)
+		{
+			<!-- If a checkbox is found set it to the same status as the control checkbox -->
+			<!-- This will set both control checkboxes to the same status -->
+			if (f.elements[i].type=="checkbox")
+				f.elements[i].checked=checked_status;
+		}
+	}
+
+	<!-- Sets selectboxes to the same index -->
+	<!-- Input parameter is the index of the control select -->
+	function set_category(ix)
+	{
+		<!-- Shortcut to the form object. Must be inside function because the form doesn't exists earlier -->
+		var f = document.form1;
+
+		<!-- loop through all fields in the form -->
+		for (i=0;i<f.length;i++)
+		{
+			<!-- If a select is found set it to the same index as the control select -->
+			<!-- This will set both drop-down lists to the same option -->
+			if (f.elements[i].type=="select-one")
+				f.elements[i].selectedIndex=ix;
+		}
+	}
+</script>
+
+
+
+
+
+<div class="noprint">
+
+		    <p><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accountsoverview&amp;command=accountsoverview&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.ucaccounttransactionslinkcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=eDZeOnBQAMy3Q8VP2h3OPACC">Till Konton</a></p>
+
+
+
+
+		<p><a href="https://internetbanken.privat.nordea.se/nsp/engine?usecase=edit_settings&amp;command=get_account_overview_command&amp;guid=LgOoDqZS1wimKsm2hyC80ACC&amp;commandorigin=0.ucaccounttransactionslinkcw&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;hash=OLmwqmZOy4cAc7RxJwghnwCC">Till Kontoinst�llningar</a></p>
+
+</div>
+
+
+<script type="text/javascript">
+	<!--
+		showContentAreaPrintLinkBottom('Skriv ut');
+	// -->
+</script><table class="print_bottom noprint"><tbody><tr><td><a href="" onclick="window.print();return false;"><img src="./Nordeas Internetbank Privat_files/print.gif" alt="" class="print_icon"></a></td><td><a href="" onclick="window.print();return false;">Skriv ut</a></td></tr></tbody></table>
+</td>
+  </tr>
+  <!-- /BCD area -->
+  <!-- Footer -->
+
+
+
+
+
+
+<tr>
+	<td class="fb"><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accountsoverview&amp;command=getcurrenttransactions&amp;guid=BAyZJ9H3Vv2cl6b4jRU5vACC&amp;commandorigin=0.viewaccountsfrontpage&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;currentaccountsoverviewtable=0&amp;hash=CyAR9YlaN1RRJLfjTY7ntgCC#top">Upp</a></td>
+	<td class="fm"><a href="https://internetbanken.privat.nordea.se/nsp/core?usecase=accountsoverview&amp;command=getcurrenttransactions&amp;guid=BAyZJ9H3Vv2cl6b4jRU5vACC&amp;commandorigin=0.viewaccountsfrontpage&amp;fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&amp;currentaccountsoverviewtable=0&amp;hash=CyAR9YlaN1RRJLfjTY7ntgCC#top"><img src="./Nordeas Internetbank Privat_files/bt.gif" id="bt" alt=""></a></td>
+	<td class="fcd">�&nbsp;Copyright&nbsp;2016&nbsp;Nordea, PILLA PORTILHO,EDUARDO, 09 februari 2016, kl. 18.14, <a class="noprint" href="http://www.nordea.se/Privat/Information%2bom%2bbehandling%2bav%2bpersonuppgifter/214014.html" target="_blank">Behandling av personuppgifter mm</a></td>
+</tr>
+<!-- ******** Build: 2015-11-24 14:32:05 ********* -->
+<!-- /Footer -->
+
+
+
+</tbody></table>
+<div id="printFooter">
+  <p>Utskriven av kund ��&nbsp;Copyright&nbsp;2016&nbsp;Nordea, PILLA PORTILHO,EDUARDO, 09 februari 2016, kl. 18.14, <a class="noprint" href="http://www.nordea.se/Privat/Information%2bom%2bbehandling%2bav%2bpersonuppgifter/214014.html" target="_blank">Behandling av personuppgifter mm</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="./Nordeas Internetbank Privat_files/webtrends_SE.js" type="text/javascript"></script>
+<script src="./Nordeas Internetbank Privat_files/createPageTitleAndContentGroup_WT.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var currDate = "02/09/2016";
+var currTime = "18:14:41";
+var invoiceNumber = "1455038081820";
+var pageId = 'viewtransactionspage';
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+
+
+    create_breadcrumbs();
+
+
+	_tag.dcsid="dcsxpehghvz5bdof171e917on_5x6c";
+	_tag.fpcdom="";
+	_tag.DCSext.wsite="PN-SE";
+	_tag.DCSext.lang="sv_SE";
+
+
+    var campaigns = "";
+
+    var arr = new Array();
+    arr = document.getElementsByTagName("WTad");
+    for(var i = 0; i < arr.length; i++) {
+        campaigns += document.getElementsByTagName("WTad")[i].getAttribute('value') + ";";
+    }
+    if (campaigns != "") {
+        _tag.WT.ad=campaigns;
+    }
+
+
+
+	var mcrmboxi = "";
+
+    var boxarr = new Array();
+    boxarr = document.getElementsByTagName("WTmcrmboxi");
+    for(var i = 0; i < boxarr.length; i++) {
+        mcrmboxi += document.getElementsByTagName("WTmcrmboxi")[i].getAttribute('value') + ";";
+    }
+    if (mcrmboxi != "") {
+        _tag.DCSext.mcrmboxi=mcrmboxi;
+	}
+
+	var mcrmboxiplace = "";
+
+    var boxplacearr = new Array();
+    boxplacearr = document.getElementsByTagName("WTmcrmboxiplacement");
+    for(var i = 0; i < boxplacearr.length; i++) {
+        mcrmboxiplace += document.getElementsByTagName("WTmcrmboxiplacement")[i].getAttribute('value') + ";";
+    }
+
+    if (mcrmboxiplace != "") {
+        _tag.DCSext.mcrmboxiplacement = mcrmboxiplace;
+	}
+
+
+
+
+    if ("null" !== "null") {
+    	_tag.DCSext.mcrmboxc = "null" + " - " + "null" ;
+    	_tag.DCSext.mcrmboxcplacement = "null";
+    	_tag.DCSext.mcrmboxcaction = "null";
+    }
+
+
+
+    if (window.create_WT_tags) {
+        create_WT_tags();
+    } else {
+        if (document.getElementById("SOLOWORK")){
+            if (SOLOWORK.create_WT_tags){
+                SOLOWORK.create_WT_tags();
+            }
+        }
+    }
+
+    if ("false"=="true") {
+        _tag.WT.rv="1";
+        _tag.DCSext.loginmethod="Mobilt BankID";
+        _tag.DCSext.logintype="Strong login";
+        _tag.DCSext.loginevent="";
+        _tag.WT.seg_2="";
+    }
+    if ("false"=="true") {
+        _tag.DCSext.loginmethod="Mobilt BankID";
+        _tag.DCSext.logintype="Strong login";
+        _tag.DCSext.loginevent="";
+    }
+}
+
+
+
+function call_webtrends(){
+
+    if (window.create_WT_tags) {
+        _tag.dcsCollect();
+    } else {
+        if (document.getElementById("SOLOWORK")){
+            if (SOLOWORK.iframe_request_wt) {
+                _tag.dcsCollect();
+            }
+        } else {
+            _tag.dcsCollect();
+        }
+    }
+}
+
+
+
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+        if (oldonload) {
+            oldonload();
+        }
+            func();
+        }
+    }
+}
+
+addLoadEvent(call_webtrends);
+
+//]]>>
+</script>
+
+<noscript>
+	&lt;div&gt;
+		&lt;img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="https://statse.webtrendslive.com/dcsxpehghvz5bdof171e917on_5x6c/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No&amp;amp;WT.tv=9.3.0&amp;amp;dcssip=internetbanken.privat.nordea.se"/&gt;
+	&lt;/div&gt;
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var mcp_cookie = 'efpcookiekBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx';
+var mcp_tw_cmd = 'engine?usecase=timeoutwarning&command=timeout_warning_command&guid=LgOoDqZS1wimKsm2hyC80ACC&fpid=kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx&pipe=ajax&hash=A3arnBuAezdoEoBBf27KHQCC'
+    mcp_tw_cmd += "&ajaxtoken=" + mcpGetST(mcp_cookie);
+</script>
+
+<div id="mcp_tw_overlay" class="mcp_tw_overlay select-free" style="display: none; height: 1737px; width: 100%;">
+  <iframe src="javascript:false"></iframe>
+</div>
+
+<div id="mcp_tw_overlay_white" class="mcp_tw_overlay_white select-free" style="display: none; height: 1737px; width: 100%;">
+  <!-- ********* Section TOP *********** -->
+  <div id="top-out_jcl">
+    <div id="top_jcl">
+      <!-- ********** Section LOGO ********** -->
+      <div id="logo-out_jcl">
+        <div id="logo_jcl">
+          <a href="http://www.nordea.dk/"><img src="./Nordeas Internetbank Privat_files/nordea_logo.gif" id="nordea_logo" width="82" height="18" alt="www.nordea.dk"></a>
+        </div>
+      </div>
+      <!-- ********** Section SITE TITLE ********** -->
+      <div id="title-out_jcl">
+        <div id="title_jcl">
+          <img src="./Nordeas Internetbank Privat_files/title_netbank.gif" id="title_netbank" width="155" height="25" alt="Netbank">
+        </div>
+      </div>
+      <!-- ************* Section MAINNAVIGATION ************* -->
+      <div id="mainNavigation-out_jcl">
+        <div id="mainNavigation_jcl">
+
+          <!-- ************ Section TOOLBAR ********** -->
+          <div id="toolbar-out_jcl">
+            <div id="toolbar_for_shortcuts_jcl">
+              <div>
+                <div id="container_jcl">
+                  <ul id="nav_jcl">
+                    <li class="nocolor_last">&nbsp;</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <iframe src="javascript:false"></iframe>
+</div>
+
+<div id="mcp_tw_content" class="mcp_tw_content" style="display: none; left: 448px;">
+  <span id="timeout_content">
+
+    <h3 class="layer_bar1">
+      <img src="./Nordeas Internetbank Privat_files/nordea_logo_inv_60x13.gif" width="62" height="15">
+      Automatisk utloggning
+    </h3>
+    <p>
+      Internetbanken st�ngs automatiskt efter
+
+      <sapn id="onlineUsecasetimeoutInMinutes">30</sapn>
+      minuter. Du blir utloggad om
+      <sapn id="onlineWarningTimeInMinutes">5</sapn>
+      minuter
+      0
+      sekunder
+      <br> <strong>Vill du forts�tta att anv�nda Internetbanken?</strong>
+    </p>
+
+    <form action="https://internetbanken.privat.nordea.se/nsp/engine" method="POST" enctype="application/x-www-form-urlencoded" id="timeoutWarningForm" accept-charset="ISO-8859-15"><input type="hidden" name="usecase" value="base"><input type="hidden" name="command" value="formcommand"><input type="hidden" name="guid" value="LgOoDqZS1wimKsm2hyC80ACC"><input type="hidden" name="fpid" value="kBOu7KyZBkBd9fb9Ck5qTwCC4502460429767405325xxxxxxxxx"><input type="hidden" name="hash" value="f300ZQipNWlIpDCA16C7ogCC">
+      <input type="hidden" name="defaultcommand" value="base$logout_after_timeout">
+      <p class="buttonsright">
+        <input name="timeoutwarning$timeout_warning_command" class="button" onclick="mcpHideLayer(); return false;" type="submit" value="Ja, jag vill forts�tta">
+        <input name="base$logout" class="button" type="submit" value="Nej, logga ut mig">
+        <input name="base$logout_after_timeout" class="hiddenbutton" type="submit">
+      </p>
+    </form>
+
+
+  </span>
+  <span id="logged_out_content">
+    <h3 class="layer_bar2">
+      Sessionen st�ngd
+    </h3>
+    <table class="erf" width="100%" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td width="47">
+          <img src="./Nordeas Internetbank Privat_files/IncorrectInput.gif" alt="Fel">
+        </td>
+        <td>
+          <strong>&nbsp;</strong><br>
+          &nbsp; <br>
+          <a href="https://internetbanken.privat.nordea.se/nsp/engine">&nbsp;</a>
+        </td>
+      </tr>
+    </tbody></table>
+  </span>
+</div>
+
+<script language="JavaScript">
+<!--
+  function justdoit()
+   {
+mcpInitTW(1500000); initTimeOut(1799000);
+  }
+//-->
+</script>
+
+</body></html>

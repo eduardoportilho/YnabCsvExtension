@@ -1,3 +1,5 @@
+// Depende de jQuery
+
 function YNAB() {
 }
 
@@ -42,6 +44,18 @@ YNAB.extractYNABContentFromText = function (selectionText) {
  */
 YNAB.extractYNABContentFromElement = function (selectionElement) {
 
+};
+
+/**
+ * Retorna o conteúdo das transações no formato CSV YNAB
+ * @param selectedElements Elementos inicial e final da seleção
+ * @returns (string) conteúdo CSV
+ */
+YNAB.extractYNABContentFromSelectedElements = function (selectedElements) {
+    var selectionTabularData = Utils.extractRowColArrayFromSelection(selectedElements);
+    var columnOrder = YNAB.findColumnOrder(selectionTabularData, selectedElements[0]);
+    var csv = YNAB.buildYnabCsv(selectionTabularData, columnOrder);
+    return csv;
 };
 
 //COLUMN ORDER
