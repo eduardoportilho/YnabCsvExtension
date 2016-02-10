@@ -5,49 +5,6 @@ function YNAB() {
 
 /**
  * Retorna o conteúdo das transações no formato CSV YNAB
- * @param selectionText texto selecionado (opcional)
- * @param selectionElement elemento dentro da tabela contendo os dados  (opcional)
- * @returns (string) conteúdo CSV
- */
-YNAB.extractYNABContent = function (selectionText, selectionElement) {
-    if (selectionText && selectionElement) {
-        return YNAB.extractYNABContentFromTextAndElement(selectionText, selectionElement);
-    }
-    else if (selectionText && !selectionElement) {
-        return YNAB.extractYNABContentFromText(selectionText);
-    }
-    else if (!selectionText && selectionElement) {
-        return YNAB.extractYNABContentFromElement(selectionElement);
-    }
-    return "";
-};
-
-/**
- * Idem extractYNABContent porém com ambos parametros obrigatórios
- */
-YNAB.extractYNABContentFromTextAndElement = function (selectionText, selectionElement) {
-    var selectionTabularData = Utils.textTableToRowColArray(selectionText);
-    var columnOrder = YNAB.findColumnOrder(selectionTabularData, selectionElement);
-    var csv = YNAB.buildYnabCsv(selectionTabularData, columnOrder);
-    return csv;
-};
-
-/**
- * Idem extractYNABContent porém apenas com selectionText obrigatório
- */
-YNAB.extractYNABContentFromText = function (selectionText) {
-
-};
-
-/**
- * Idem extractYNABContent porém apenas com selectionElement obrigatório
- */
-YNAB.extractYNABContentFromElement = function (selectionElement) {
-
-};
-
-/**
- * Retorna o conteúdo das transações no formato CSV YNAB
  * @param selectedElements Elementos inicial e final da seleção
  * @returns (string) conteúdo CSV
  */

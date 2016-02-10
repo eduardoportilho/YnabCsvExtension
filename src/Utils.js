@@ -82,7 +82,7 @@ Utils.extractRowColArrayFromSelection = function(selectionNodes) {
     var lastIndex = indexB > indexA ? indexB : indexA;
 
     var rows = [], rowContent;
-    while(row.index() <= lastIndex) {
+    while(row.length > 0 && row.index() <= lastIndex) {
         rowContent = [];
 
         row.find('td').each(function(idx, el) {

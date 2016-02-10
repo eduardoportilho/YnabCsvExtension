@@ -1,41 +1,4 @@
 describe("YNAB", function () {
-    describe("Extract Redirection", function () {
-        beforeEach(function () {
-            spyOn(YNAB, "extractYNABContentFromTextAndElement");
-            spyOn(YNAB, "extractYNABContentFromText");
-            spyOn(YNAB, "extractYNABContentFromElement");
-        });
-
-        it("should redirect the call if both arguments are passed", function () {
-            YNAB.extractYNABContent("aaaa", {id: "aaa"});
-            expect(YNAB.extractYNABContentFromTextAndElement).toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromText).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromElement).not.toHaveBeenCalled();
-        });
-
-        it("should redirect the call if only the selectionText is passed", function () {
-            YNAB.extractYNABContent("aaaa", undefined);
-            expect(YNAB.extractYNABContentFromTextAndElement).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromText).toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromElement).not.toHaveBeenCalled();
-        });
-
-        it("should redirect the call if only the selectionElement passed", function () {
-            YNAB.extractYNABContent(null, {id: "aaa"});
-            expect(YNAB.extractYNABContentFromTextAndElement).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromText).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromElement).toHaveBeenCalled();
-        });
-
-        it("should return empty string if no arguments are passed", function () {
-            expect(YNAB.extractYNABContent(undefined, null)).toBe("");
-            expect(YNAB.extractYNABContentFromTextAndElement).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromText).not.toHaveBeenCalled();
-            expect(YNAB.extractYNABContentFromElement).not.toHaveBeenCalled();
-        });
-    });
-
-
     describe("Header From Table", function () {
         var elementOutsideTable;
         var elementInsideTable;
@@ -234,7 +197,7 @@ describe("YNAB", function () {
     describe("Extract Content", function () {
         var header = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
         var $rootElement;
-        var clickedElement;
+        var selection;
 
         beforeEach(function () {
             $rootElement = $(
@@ -249,13 +212,13 @@ describe("YNAB", function () {
                     '<th align="left">Kategori</th>' +
                     '<th class="last forceright">Belopp</th>' +
                     '<th class="last forceright">Saldo</th>' +
-                    '<th id="clicked" class="last">&nbsp;</th>' +
+                    '<th class="last">&nbsp;</th>' +
                     '</tr>' +
 
                     '<tr class="even">' +
                     '<td class="first odd4">&nbsp;</td>' +
                     '<td class="nowrap odd4" align="left">2016-01-04</td>' +
-                    '<td class="nowrap odd4" align="left">Payee A</td>' +
+                    '<td id="selectionStart" class="nowrap odd4" align="left">Payee A</td>' +
                     '<td class="odd4" align="left">&nbsp;</td>' +
                     '<td class="nowrap odd4" align="right">150,00</td>' +
                     '<td class="nowrap odd4" align="right">&nbsp;</td>' +
@@ -264,11 +227,11 @@ describe("YNAB", function () {
 
                     '<tr class="odd1">' +
                     '<td class="first odd4">&nbsp;</td>' +
-                    '<td class="nowrap odd4" align="left">2016-01-04</td>' +
+                    '<td class="nowrap odd4" align="left">2016-01-14</td>' +
                     '<td class="nowrap odd4" align="left">Payee B</td>' +
                     '<td class="odd4" align="left">&nbsp;</td>' +
                     '<td class="nowrap odd4" align="right">-1.025,51</td>' +
-                    '<td class="nowrap odd4" align="right">&nbsp;</td>' +
+                    '<td id="selectionEnd" class="nowrap odd4" align="right">&nbsp;</td>' +
                     '<td class="last odd4">&nbsp;</td>' +
                     '</tr>' +
 
@@ -277,7 +240,10 @@ describe("YNAB", function () {
                     "</div>"
             );
             $(document.body).append($rootElement);
-            clickedElement = $('#clicked').get(0);
+            selection = [
+                $('#selectionStart').get(0),
+                $('#selectionEnd').get(0)
+            ];
         });
 
         afterEach(function () {
@@ -285,12 +251,11 @@ describe("YNAB", function () {
         });
 
         it('should extract the data and build the CSV', function () {
-            var selectionText = ' 	2016-01-04	Reservation Kortköp AKERSBERGA 1283	 	-150,00	 	 \n' +
-                ' 	2016-01-04	Reservation Kortköp ICA KVANTUM AKERSB	 	-1.025,51	 	 ';
-            var csv = YNAB.extractYNABContentFromTextAndElement(selectionText, clickedElement);
+            console.debug();
+            var csv = YNAB.extractYNABContentFromSelectedElements(selection);
             expect(csv).toEqual(header +
-                    '04/01/2016,Reservation Kortköp AKERSBERGA 1283,,,,-150.00\n' +
-                    '04/01/2016,Reservation Kortköp ICA KVANTUM AKERSB,,,,-1025.51\n'
+                    '04/01/2016,Payee A,,,,150.00\n' +
+                    '14/01/2016,Payee B,,,,-1025.51\n'
             );
         });
     });
