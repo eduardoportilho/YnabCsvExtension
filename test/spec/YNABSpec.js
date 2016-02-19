@@ -1,4 +1,20 @@
 describe("YNAB", function () {
+
+    describe("Header matcher", function () {
+        var possibleHeaders = ['bb', 'bbb'];
+
+        it("should find match", function () {
+            var headerIdx = YNAB.findBetterMatch(['aaa', 'bbb', 'ccc'], possibleHeaders);
+            expect(headerIdx).toBe(1);
+        });
+
+        it("should find higher priority header", function () {
+            var headerIdx = YNAB.findBetterMatch(['aaa', 'bbb', 'ccc', 'bb'], possibleHeaders);
+            expect(headerIdx).toBe(3);
+        });
+
+    });
+
     describe("Header From Table", function () {
         var elementOutsideTable;
         var elementInsideTable;
@@ -87,6 +103,30 @@ describe("YNAB", function () {
                 date: 3,
                 payee: 5,
                 inflow: 1
+            });
+        });
+
+    });
+
+    describe("Nordea Gold colum order", function () {
+
+        it("should find date, payee and inflow", function () {
+            var columnOrder = YNAB.findColumnOrderUsingTableHeader(['Datum',
+                'Transaktion', 'Mottagare', 'Valuta', 'Belopp SEK']);
+            expect(columnOrder).toEqual({
+                date: 0,
+                payee: 2,
+                inflow: 4
+            });
+        });
+
+        it("should use Mottagare as payee", function () {
+            var columnOrder = YNAB.findColumnOrderUsingTableHeader(['Datum',
+                'Mottagare', 'Valuta', 'Transaktion', 'Belopp SEK']);
+            expect(columnOrder).toEqual({
+                date: 0,
+                payee: 1,
+                inflow: 4
             });
         });
 
@@ -184,6 +224,18 @@ describe("YNAB", function () {
         it("should build csv", function () {
             var csv = YNAB.buildYnabCsv([
                 ['1000', 'Payee A', '2015/01/01'],
+                ['-1000', 'Payee B', '2015/01/02']
+            ], {inflow:0, payee:1, date: 2});
+            expect(csv).toEqual(header +
+                '01/01/2015,Payee A,,,,1000.00\n' +
+                '02/01/2015,Payee B,,,,-1000.00\n'
+            );
+        });
+
+        it("should ignore empty lines", function () {
+            var csv = YNAB.buildYnabCsv([
+                ['1000', 'Payee A', '2015/01/01'],
+                [],
                 ['-1000', 'Payee B', '2015/01/02']
             ], {inflow:0, payee:1, date: 2});
             expect(csv).toEqual(header +

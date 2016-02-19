@@ -78,8 +78,8 @@ YNAB.tryToFindTableHeader = function(elementInTable) {
 // obj[headerType] = arrays de titulos possíveis
 var POSSIBLE_HEADER_NAMES = {
     date: ['datum', 'date', 'data'],
-    payee: ['transaktion', 'payee', 'descrição'],
-    inflow: ['belopp', 'inflow', 'value']
+    payee: ['mottagare', 'transaktion', 'payee', 'descrição'],
+    inflow: ['belopp', 'belopp sek', 'inflow', 'value']
 };
 
 /**
@@ -90,19 +90,45 @@ var POSSIBLE_HEADER_NAMES = {
 YNAB.findColumnOrderUsingTableHeader = function (headerValues) {
     var columnOrder = {};
 
-    for(var i = 0 ; i < headerValues.length ; i++) {
-        var header = headerValues[i];
-        for(var columnKey in POSSIBLE_HEADER_NAMES) {
-            var nameList = POSSIBLE_HEADER_NAMES[columnKey];
-            var headerIsIncludedOnNameList = Utils.arrayContainsIgnoreCaseAndBlank(nameList, header);
-            if(headerIsIncludedOnNameList) {
-                columnOrder[columnKey] = i;
-                break;
-            }
+    for(var columnKey in POSSIBLE_HEADER_NAMES) {
+        var possibleHeaders = POSSIBLE_HEADER_NAMES[columnKey];
+        var index = YNAB.findBetterMatch(headerValues, possibleHeaders);
+        if(index >= 0) {
+            columnOrder[columnKey] = index;
         }
     }
 
     return columnOrder;
+};
+
+/**
+ * Descobre o indice do header de maior prioridade entre as opções fornecidas
+ * @param headerValues Todos os headers de uma tabela
+ * @param possibleHeaders Nomes possíveis para o header desejado, em ordem decrescente de prioridade
+ */
+YNAB.findBetterMatch = function(headerValues, possibleHeaders) {
+    var prioridadeVsIndice = {},
+        menorPrioridade = undefined;
+
+    for (var headerIdx = 0 ; headerIdx < headerValues.length ; headerIdx++) {
+        var headerVal = headerValues[headerIdx];
+        for (var prio = 0 ; prio < possibleHeaders.length ; prio++) {
+            var possibleHeader = possibleHeaders[prio];
+
+            if(Utils.equalsIgnoreCaseAndBlank(headerVal, possibleHeader)) {
+                prioridadeVsIndice[prio] = headerIdx;
+
+                if(menorPrioridade === undefined) {
+                    menorPrioridade = prio;
+                } else {
+                    menorPrioridade = Math.min(prio, menorPrioridade);
+                }
+            }
+        }
+    }
+
+    return (menorPrioridade === undefined) ? undefined : prioridadeVsIndice[menorPrioridade];
+
 };
 
 /**
@@ -156,15 +182,22 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
     var csv = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
     for(var row = 0 ; row < tabularData.length ; row++) {
         var rowValues = tabularData[row];
+        try {
 
-        var date = Utils.formatDate(rowValues[columnIndex.date]);
-        var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
-        var inflow = columnIndex.inflow >= 0 ? Utils.formatMoney(rowValues[columnIndex.inflow]) : '';
-        var category = '';
-        var memo = '';
-        var outflow = '';
+            var date = Utils.formatDate(rowValues[columnIndex.date]);
+            var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
+            var inflow = columnIndex.inflow >= 0 ? Utils.formatMoney(rowValues[columnIndex.inflow])
+                : '';
+            var category = '';
+            var memo = '';
+            var outflow = '';
 
-        csv += date + ',' + payee + ',' + category + ',' + memo + ',' + outflow + ',' + inflow + '\n';
+            csv +=
+                date + ',' + payee + ',' + category + ',' + memo + ',' + outflow + ',' + inflow
+                + '\n';
+        } catch(any) {
+            console.log("Ignorando linha inválida: (" + rowValues + ")");
+        }
     }
     return csv;
 };

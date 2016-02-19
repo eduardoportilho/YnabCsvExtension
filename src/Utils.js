@@ -45,8 +45,12 @@ Utils.arrayContains = function(array, value) {
  */
 Utils.arrayContainsIgnoreCaseAndBlank = function(stringArray, string) {
     return stringArray.some(function(stringValue){
-        return stringValue.toLowerCase().trim() === string.toLowerCase().trim();
+        return Utils.equalsIgnoreCaseAndBlank(stringValue, string);
     });
+};
+
+Utils.equalsIgnoreCaseAndBlank = function(strA, strB) {
+    return strA.toLowerCase().trim() === strB.toLowerCase().trim();
 };
 
 /**
