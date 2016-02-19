@@ -78,8 +78,8 @@ YNAB.tryToFindTableHeader = function(elementInTable) {
 // obj[headerType] = arrays de titulos possíveis
 var POSSIBLE_HEADER_NAMES = {
     date: ['datum', 'date', 'data'],
-    payee: ['mottagare', 'transaktion', 'payee', 'descrição'],
-    inflow: ['belopp', 'belopp sek', 'inflow', 'value']
+    payee: ['mottagare', 'transaktion', 'payee', 'descrição', 'histórico'],
+    inflow: ['belopp', 'belopp sek', 'inflow', 'value', 'valor']
 };
 
 /**

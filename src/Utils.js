@@ -54,17 +54,6 @@ Utils.equalsIgnoreCaseAndBlank = function(strA, strB) {
 };
 
 /**
- * Retorna os nós inicial e final da seleção
- * @returns {*[]}
- */
-Utils.getSelectionNodes = function() {
-    var selection = window.getSelection();
-    var nodeA = selection.extentNode.parentElement;
-    var nodeB = selection.baseNode.parentElement;
-    return [nodeA, nodeB];
-};
-
-/**
  * 1) Localiza a primeira e a última TR que contém os nós selecionados
  * 2) Itera sobre todas as TRs da primeira até a última
  * 3) Extrai o conteúdo de texto dos TDs contidos em cada TR
@@ -115,6 +104,10 @@ Utils.formatDate = function(text) {
         year = tokens[0];
         month = tokens[1];
         day = tokens[2];
+    } else if(tokens[2].length == 4) {
+        year = tokens[2];
+        month = tokens[1];
+        day = tokens[0];
     }
 
     if(parseInt(month) > 12) {
@@ -126,3 +119,37 @@ Utils.formatDate = function(text) {
     return day + '/' + month + '/' + year;
 };
 
+/**
+ * Retorna os nós inicial e final da seleção
+ * @returns {*[]}
+ */
+Utils.getSelectionNodes = function() {
+    try {
+        return Utils.getSelectionOnFramesOrFail([window]);
+    } catch(any) {}
+    return [];
+};
+
+Utils.getSelectionOnFramesOrFail = function(frames) {
+    for (var i = 0, numFrames = frames.length; i < numFrames; i++) {
+        try {
+            return Utils.getSelectionNodesOnWindowOrFail(frames[i]);
+        } catch(any) {}
+    }
+
+    for (var i = 0, numFrames = frames.length; i < numFrames; i++) {
+        var subFrames = frames[i].frames;
+        try {
+            return Utils.getSelectionOnFramesOrFail(subFrames);
+        } catch(any) {}
+    }
+    throw new Error();
+};
+
+Utils.getSelectionNodesOnWindowOrFail = function(aWindow) {
+    var selection = aWindow.getSelection();
+    if(selection.extentNode != null && selection.baseNode) {
+        return [selection.extentNode.parentElement, selection.baseNode.parentElement];
+    }
+    throw new Error();
+};

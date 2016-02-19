@@ -1,14 +1,16 @@
-describe("Utils x", function() {
-
-    xit("should ...", function() {
-      expect(false).toBeTruthy();
-    });
+describe("Utils", function() {
 
     describe("Date utils", function() {
         it("should format YYYY-MM-DD date", function() {
             expect(Utils.formatDate('2016-01-02')).toEqual('02/01/2016');
             expect(Utils.formatDate('2016\\01\\02')).toEqual('02/01/2016');
             expect(Utils.formatDate('2016-13-02')).toEqual('13/02/2016');
+        });
+
+        it("should format DD-MM-YYYY date", function() {
+            expect(Utils.formatDate('02-01-2016')).toEqual('02/01/2016');
+            expect(Utils.formatDate('02\\01\\2016')).toEqual('02/01/2016');
+            expect(Utils.formatDate('02-13-2016')).toEqual('13/02/2016');
         });
     });
 

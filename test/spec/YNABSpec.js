@@ -109,7 +109,6 @@ describe("YNAB", function () {
     });
 
     describe("Nordea Gold colum order", function () {
-
         it("should find date, payee and inflow", function () {
             var columnOrder = YNAB.findColumnOrderUsingTableHeader(['Datum',
                 'Transaktion', 'Mottagare', 'Valuta', 'Belopp SEK']);
@@ -129,7 +128,17 @@ describe("YNAB", function () {
                 inflow: 4
             });
         });
+    });
 
+    describe("Santander colum order", function () {
+        it("should find date, payee and inflow", function () {
+            var columnOrder = YNAB.findColumnOrderUsingTableHeader(['Data', 'Histórico', 'Docto.', 'Valor', 'Saldo']);
+            expect(columnOrder).toEqual({
+                date: 0,
+                payee: 1,
+                inflow: 3
+            });
+        });
     });
 
     describe("Column Order Validator", function () {
