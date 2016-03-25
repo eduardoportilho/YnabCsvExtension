@@ -186,6 +186,7 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
 
             var date = Utils.formatDate(rowValues[columnIndex.date]);
             var payee = columnIndex.payee >= 0 ? rowValues[columnIndex.payee] : '';
+            payee = YNAB.formatPayee(payee);
             var inflow = columnIndex.inflow >= 0 ? Utils.formatMoney(rowValues[columnIndex.inflow])
                 : '';
             var category = '';
@@ -200,5 +201,10 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
         }
     }
     return csv;
+};
+
+
+YNAB.formatPayee = function(text) {
+    return text.replace(/,/g, ';');
 };
 

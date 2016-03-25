@@ -253,6 +253,11 @@ describe("YNAB", function () {
             );
         });
 
+        it("should replace commas with semi colon in payee", function(){
+            expect(YNAB.formatPayee('AAAA,BBBB')).toEqual('AAAA;BBBB');
+            expect(YNAB.formatPayee(',,,')).toEqual(';;;');
+        });
+
     });
 
     describe("Extract Content", function () {
@@ -279,7 +284,7 @@ describe("YNAB", function () {
                     '<tr class="even">' +
                     '<td class="first odd4">&nbsp;</td>' +
                     '<td class="nowrap odd4" align="left">2016-01-04</td>' +
-                    '<td id="selectionStart" class="nowrap odd4" align="left">Payee A</td>' +
+                    '<td id="selectionStart" class="nowrap odd4" align="left">Payee A,A</td>' +
                     '<td class="odd4" align="left">&nbsp;</td>' +
                     '<td class="nowrap odd4" align="right">150,00</td>' +
                     '<td class="nowrap odd4" align="right">&nbsp;</td>' +
@@ -315,7 +320,7 @@ describe("YNAB", function () {
             console.debug();
             var csv = YNAB.extractYNABContentFromSelectedElements(selection);
             expect(csv).toEqual(header +
-                    '04/01/2016,Payee A,,,,150.00\n' +
+                    '04/01/2016,Payee A;A,,,,150.00\n' +
                     '14/01/2016,Payee B,,,,-1025.51\n'
             );
         });
