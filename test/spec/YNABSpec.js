@@ -1,20 +1,5 @@
 describe("YNAB", function () {
 
-    describe("Header matcher", function () {
-        var possibleHeaders = ['bb', 'bbb'];
-
-        it("should find match", function () {
-            var headerIdx = YNAB.findBetterMatch(['aaa', 'bbb', 'ccc'], possibleHeaders);
-            expect(headerIdx).toBe(1);
-        });
-
-        it("should find higher priority header", function () {
-            var headerIdx = YNAB.findBetterMatch(['aaa', 'bbb', 'ccc', 'bb'], possibleHeaders);
-            expect(headerIdx).toBe(3);
-        });
-
-    });
-
     describe("Header From Table", function () {
         var elementOutsideTable;
         var elementInsideTable;
@@ -57,6 +42,28 @@ describe("YNAB", function () {
                     '<th class="last forceright">Saldo</th>' +
                     '<th class="last">&nbsp;</th>' +
                     '</tr>');
+            $('#rootElement #table tbody').prepend(header);
+
+            //when
+            var result = YNAB.tryToFindTableHeader(elementInsideTable);
+
+            //then
+            expect(result.found).toBe(true);
+            expect(result.value.join('|')).toEqual(" |Datum|Transaktion|Kategori|Belopp|Saldo| ");
+        });
+
+
+        it("should find header without th", function(){//given
+            var header = $(
+                '<tr class="odd1">' +
+                '<td class="first" align="left">&nbsp;</td>' +
+                '<td align="left">Datum</td>' +
+                '<td align="left">Transaktion</td>' +
+                '<td align="left">Kategori</td>' +
+                '<td class="last forceright">Belopp</td>' +
+                '<td class="last forceright">Saldo</td>' +
+                '<td class="last">&nbsp;</td>' +
+                '</tr>');
             $('#rootElement #table tbody').prepend(header);
 
             //when

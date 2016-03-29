@@ -53,6 +53,11 @@ Utils.equalsIgnoreCaseAndBlank = function(strA, strB) {
     return strA.toLowerCase().trim() === strB.toLowerCase().trim();
 };
 
+Utils.matchIgnoringCaseAndBlank = function(str, regexp) {
+    var regexp = new RegExp(regexp, "gi");
+    return regexp.test(str);
+};
+
 /**
  * 1) Localiza a primeira e a última TR que contém os nós selecionados
  * 2) Itera sobre todas as TRs da primeira até a última
@@ -97,26 +102,43 @@ Utils.formatMoney = function(text) {
 
 Utils.formatDate = function(text) {
     var year, month, day;
-    var tokens = text.split(/\D/);
+    try {
+        var tokens = text.split(/\D/);
 
-    //YYYY-XX-XX
-    if(tokens[0].length == 4) {
-        year = tokens[0];
-        month = tokens[1];
-        day = tokens[2];
-    } else if(tokens[2].length == 4) {
-        year = tokens[2];
-        month = tokens[1];
-        day = tokens[0];
+        // DD-MM
+        if(tokens.length === 2) {
+            day = tokens[0];
+            month = tokens[1];
+            year = new Date().getFullYear();
+        }
+        else if(tokens.length === 3) {
+            // YYYY-XX-XX
+            if (tokens[0].length == 4) {
+                year = tokens[0];
+                month = tokens[1];
+                day = tokens[2];
+            }
+            // DD-MM-YYYY
+            else if (tokens[2].length == 4) {
+                day = tokens[0];
+                month = tokens[1];
+                year = tokens[2];
+            }
+        }
+        else {
+            throw new Error("invalid length ");
+        }
+
+        if (parseInt(month) > 12) {
+            var temp = month;
+            month = day;
+            day = temp;
+        }
+
+        return day + '/' + month + '/' + year;
+    } catch (any) {
+        throw new Error("Could not format date ["+ text +"] ("+ any.message+")");
     }
-
-    if(parseInt(month) > 12) {
-        var temp = month;
-        month = day;
-        day = temp;
-    }
-
-    return day + '/' + month + '/' + year;
 };
 
 /**

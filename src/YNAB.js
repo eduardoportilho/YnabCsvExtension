@@ -72,13 +72,27 @@ YNAB.tryToFindTableHeader = function(elementInTable) {
         }).get();
         return {found: true, value: headerVals};
     }
+    //2: primeira linha da tabela
+    var firstRow = table.find('tr:first');
+    if (firstRow.length > 0) {
+        var headerCols = firstRow
+            .find('td')
+            .filter(function(i,td) {
+                //ignora tds com filhos
+                return $(td).children().length === 0;
+            });
+        var headerVals = headerCols.map(function (i, el) {
+            return $(el).text();
+        }).get();
+        return {found: true, value: headerVals};
+    }
     return {found: false};
 };
 
 // obj[headerType] = arrays de titulos possíveis
 var POSSIBLE_HEADER_NAMES = {
     date: ['datum', 'date', 'data'],
-    payee: ['mottagare', 'transaktion', 'payee', 'descrição', 'histórico'],
+    payee: ['mottagare', 'transaktion', 'payee', 'descrição', 'histórico', 'lançamento'],
     inflow: ['belopp', 'belopp sek', 'inflow', 'value', 'valor']
 };
 
@@ -92,7 +106,7 @@ YNAB.findColumnOrderUsingTableHeader = function (headerValues) {
 
     for(var columnKey in POSSIBLE_HEADER_NAMES) {
         var possibleHeaders = POSSIBLE_HEADER_NAMES[columnKey];
-        var index = YNAB.findBetterMatch(headerValues, possibleHeaders);
+        var index = YNABChrome.HeaderFinder.findBetterMatch(headerValues, possibleHeaders);
         if(index >= 0) {
             columnOrder[columnKey] = index;
         }
@@ -101,35 +115,6 @@ YNAB.findColumnOrderUsingTableHeader = function (headerValues) {
     return columnOrder;
 };
 
-/**
- * Descobre o indice do header de maior prioridade entre as opções fornecidas
- * @param headerValues Todos os headers de uma tabela
- * @param possibleHeaders Nomes possíveis para o header desejado, em ordem decrescente de prioridade
- */
-YNAB.findBetterMatch = function(headerValues, possibleHeaders) {
-    var prioridadeVsIndice = {},
-        menorPrioridade = undefined;
-
-    for (var headerIdx = 0 ; headerIdx < headerValues.length ; headerIdx++) {
-        var headerVal = headerValues[headerIdx];
-        for (var prio = 0 ; prio < possibleHeaders.length ; prio++) {
-            var possibleHeader = possibleHeaders[prio];
-
-            if(Utils.equalsIgnoreCaseAndBlank(headerVal, possibleHeader)) {
-                prioridadeVsIndice[prio] = headerIdx;
-
-                if(menorPrioridade === undefined) {
-                    menorPrioridade = prio;
-                } else {
-                    menorPrioridade = Math.min(prio, menorPrioridade);
-                }
-            }
-        }
-    }
-
-    return (menorPrioridade === undefined) ? undefined : prioridadeVsIndice[menorPrioridade];
-
-};
 
 /**
  * Verifica se uma ordem de colunas é valida
@@ -197,7 +182,7 @@ YNAB.buildYnabCsv = function (tabularData, columnIndex) {
                 date + ',' + payee + ',' + category + ',' + memo + ',' + outflow + ',' + inflow
                 + '\n';
         } catch(any) {
-            console.log("Ignorando linha inválida: (" + rowValues + ")");
+            console.log("Ignorando linha inválida: (" + rowValues + ")(" + any.message + ")");
         }
     }
     return csv;
