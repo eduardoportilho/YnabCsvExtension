@@ -4,7 +4,7 @@ Utils.download = function (content, mimetype) {
     if(!mimetype) mimetype = "text/plain";
     var encodedUri = encodeURI("data:" + mimetype + ";charset=utf-8," + content);
     window.open(encodedUri);
-}
+};
 
 /**
  * Converte um texto em um array (linhas) de arrays (colunas).

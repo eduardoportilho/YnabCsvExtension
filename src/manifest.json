@@ -16,6 +16,7 @@
           "jquery.js",
           "jsturbo-latest.js",
           "Utils.js",
+          "HeaderFinder.js",
           "YNAB.js",
           "ynabExportContent.js"
         ]
