@@ -1,35 +1,18 @@
 
 /*
- * Extrai conteúdo YNAB da seleção e gera um arquivo para download
+ * Extract YNAB content from selected elements and generate the CSV file for dowload.
  */
 var ynabExportSelectionText = function (selectionText) {
-    /** Uncomment to debug ** /
-    console.debug();
-    /**/
-
-    /** Extrai a partir dos elementos selecionados **/
     var selectionNodes = Utils.getSelectionNodes();
-    var ynabContent = YNAB.extractYNABContentFromSelectedElements(selectionNodes);
-    /** Extrai a partir dos elementos selecionados **/
-
-    /** Extrai a partir do texto selecionado ** /
-    //TODO Não esta funcionando
-    var windowSelection = window.getSelection();
-    var selectionElement = undefined;
-    if(windowSelection) {
-        selectionElement = windowSelection.anchorNode;
-    }
-    var ynabContent = YNAB.extractYNABContent(selectionText, selectionElement);
-    /** Extrai a partir do texto selecionado **/
-
+    var ynabContent = YnabCsvGenerator.extractYNABContentFromSelectedElements(selectionNodes);
     Utils.download(ynabContent, 'text/csv');
 };
 
-
 /*
- * Recebe mensagens do background
+ * Handle background messages.
  */
 chrome.extension.onMessage.addListener(function (message, sender, callback) {
+	console.log("YnabExportContent: message received" + JSON.stringify(message));
     if (message.functiontoInvoke == "ynabExportSelectionText") {
         var selectionText = message.selectionText;
         ynabExportSelectionText(selectionText);

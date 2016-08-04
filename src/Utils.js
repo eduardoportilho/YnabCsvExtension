@@ -94,12 +94,24 @@ Utils.extractRowColArrayFromSelection = function(selectionNodes) {
     return rows;
 };
 
-
+/**
+ * Format a number with 2 decimal places
+ * @param {string} text Number as string
+ * @return {string} Number as string with 2 decimal places or empty string if it fails
+ */
 Utils.formatMoney = function(text) {
-    return text.toNumber().format({decimalPlaces: 2});
+    var number = text.toNumber();
+    if (isNaN(number)) {
+        return '';
+    }
+    return number.format({decimalPlaces: 2});
 };
 
-
+/**
+ * Lenient date formater.
+ * @param {string} text Date in any format
+ * @return {string} Date in DD/MM/YYYY format
+ */
 Utils.formatDate = function(text) {
     var year, month, day;
     try {

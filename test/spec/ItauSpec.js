@@ -18,7 +18,7 @@ describe("Itau", function () {
         });
 
         it('should extract the data and build the CSV', function () {
-            var csv = YNAB.extractYNABContentFromSelectedElements(selection);
+            var csv = YnabCsvGenerator.extractYNABContentFromSelectedElements(selection);
             expect(csv).toEqual(header +
                                 '01/03/2016,TBI 2743.32342-6/500,,,,920.00\n' +
                                 '02/03/2016,TBI 8062.09114-8HaiThai,,,,58.64\n'
@@ -27,7 +27,7 @@ describe("Itau", function () {
 
         it('should identify negative values', function () {
             pending('Negative sign is on a separated column...');
-            var csv = YNAB.extractYNABContentFromSelectedElements(selection);
+            var csv = YnabCsvGenerator.extractYNABContentFromSelectedElements(selection);
             expect(csv).toEqual(header +
                                 '01/03/2016,TBI 2743.32342-6/500,,,,-920.00\n' +
                                 '02/03/2016,TBI 8062.09114-8HaiThai,,,,-58.64\n'

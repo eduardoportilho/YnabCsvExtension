@@ -1,6 +1,4 @@
-var YNABChrome = YNABChrome || {};
-
-YNABChrome.HeaderFinder = (function(_utils){
+YnabHeaderFinder = (function(_utils){
     var exports = {};
 
     /**

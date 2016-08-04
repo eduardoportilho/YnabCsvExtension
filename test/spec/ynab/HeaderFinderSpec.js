@@ -4,12 +4,12 @@ describe("[HeaderFinder]", function () {
         var possibleHeaders = ['bb', 'bbb'];
 
         it("should find match", function () {
-            var headerIdx = YNABChrome.HeaderFinder.findBetterMatch(['aaa', 'bbb', 'ccc'], possibleHeaders);
+            var headerIdx = YnabHeaderFinder.findBetterMatch(['aaa', 'bbb', 'ccc'], possibleHeaders);
             expect(headerIdx).toBe(1);
         });
 
         it("should find higher priority header", function () {
-            var headerIdx = YNABChrome.HeaderFinder.findBetterMatch(['aaa', 'bbb', 'ccc', 'bb'], possibleHeaders);
+            var headerIdx = YnabHeaderFinder.findBetterMatch(['aaa', 'bbb', 'ccc', 'bb'], possibleHeaders);
             expect(headerIdx).toBe(3);
         });
 
@@ -17,7 +17,7 @@ describe("[HeaderFinder]", function () {
             var headerDaTabela = ['Data', 'Valor (R$)', ''];
             var headersValor = ['Amount', 'Valor'];
 
-            var headerIdx = YNABChrome.HeaderFinder.findBetterMatch(headerDaTabela, headersValor);
+            var headerIdx = YnabHeaderFinder.findBetterMatch(headerDaTabela, headersValor);
             expect(headerIdx).toBe(1);
         });
 

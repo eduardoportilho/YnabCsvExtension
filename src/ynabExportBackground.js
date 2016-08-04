@@ -1,4 +1,7 @@
-
+/**
+ * Background script of the extension.
+ * Register the content menu action and send messages to ynabExportContent.js
+ */
 function ynabExportSelectionText(info, tab) {
   var selectionText = info.selectionText;
 
@@ -11,11 +14,9 @@ function ynabExportSelectionText(info, tab) {
             "selectionText": selectionText
         });
     });
-
-
   // console.log("selectedText: |" + selectedText + "|");
-  console.log("info: " + JSON.stringify(info, null, "\t"));
-  console.log("tab: " + JSON.stringify(tab, null, "\t"));
+  // console.log("info: " + JSON.stringify(info, null, "\t"));
+  // console.log("tab: " + JSON.stringify(tab, null, "\t"));
 }
 
 chrome.contextMenus.create({

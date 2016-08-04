@@ -1,10 +1,11 @@
 {
   "name": "YNAB export",
   "description": "Export data in the YNAB format",
-  "version": "0.1",
-  "icons": { "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png" },
+  "version": "0.2",
+  "icons": { 
+    "16": "image/icon16.png",
+    "48": "image/icon48.png",
+    "128": "image/icon128.png" },
   "permissions": ["contextMenus"],
   "background": {
     "scripts": ["ynabExportBackground.js"]
@@ -13,11 +14,13 @@
     {
         "matches": ["<all_urls>"],
         "js": [
-          "jquery.js",
-          "jsturbo-latest.js",
+          "vendor/jquery.js",
+          "vendor/jsturbo-latest.js",
           "Utils.js",
-          "HeaderFinder.js",
-          "YNAB.js",
+          "ynab/HeaderFinder.js",
+          "ynab/YnabTx.js",
+          "ynab/YnabColumnOrder.js",
+          "ynab/YnabCsvGenerator.js",
           "ynabExportContent.js"
         ]
     }

@@ -1,0 +1,604 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"use",
+				"userstate"
+			],
+			[
+				"get",
+				"getDepartureDescription"
+			],
+			[
+				"it",
+				"iteractionId"
+			],
+			[
+				"iter",
+				"iteraction"
+			],
+			[
+				"user",
+				"userState"
+			],
+			[
+				"act",
+				"actionId"
+			],
+			[
+				"g",
+				"getLocation"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"n",
+				"numberCmd"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"loca",
+				"locations"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"response",
+				"ResponseData"
+			],
+			[
+				"te",
+				"telegramToken"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"is",
+				"isFull"
+			],
+			[
+				"idle",
+				"idleElevators"
+			],
+			[
+				"di",
+				"distance"
+			],
+			[
+				"flo",
+				"floor"
+			],
+			[
+				"do",
+				"down"
+			],
+			[
+				"eleva",
+				"elevator"
+			],
+			[
+				"e",
+				"elevator"
+			],
+			[
+				"_",
+				"_this"
+			],
+			[
+				"elevator",
+				"elevators"
+			],
+			[
+				"o",
+				"ordenaParadas"
+			],
+			[
+				"d",
+				"destinationQueue"
+			],
+			[
+				"mi",
+				"minIdx"
+			],
+			[
+				"m",
+				"minIdx"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"id",
+				"idxProximo"
+			],
+			[
+				"ne",
+				"nextStops"
+			],
+			[
+				"i",
+				"idxProximo"
+			],
+			[
+				"in",
+				"indexOf"
+			],
+			[
+				"lo",
+				"loadFactor"
+			],
+			[
+				"f",
+				"floorNum"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "JSO",
+		"selected_items":
+		[
+			[
+				"JSO",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"m",
+				"Set Syntax: Markdown"
+			],
+			[
+				"M",
+				"Set Syntax: Markdown"
+			],
+			[
+				"J",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"fish",
+				"Set Syntax: Shell Script (fish)"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"SeSyBash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"Sesbash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"SetS:Ba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"Et Sy:B",
+				"Set Syntax: Batch File"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Pret",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"Package",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/eduardoportilho/dev/src/personal/ynabExtension"
+	],
+	"file_history":
+	[
+		"/Users/eduardoportilho/dev/src/personal/ynabExtension/src/ynabExportContent.js",
+		"/Users/eduardoportilho/dev/src/personal/ynabExtension/src/YNAB.js",
+		"/Users/eduardoportilho/dev/src/personal/ynabExtension/src/ynabExportBackground.js",
+		"/Users/eduardoportilho/dev/src/personal/ynabExtension/src/Utils.js",
+		"/Users/eduardoportilho/Downloads/paymentProviders.yml",
+		"/Users/eduardoportilho/Google Drive/EPPMobile/__Documentos/Suécia/Compra casa/contrato Financiamento/documentos.mdown",
+		"/Users/eduardoportilho/dev/src/personal/arminio/private/local_bot.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/actions/go_action.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/services/sl_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/db_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/private/local_prod.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/model/bot_util_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/services/firebase_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/model/user_state.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/README.md",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/nearby_stops_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/location_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/.gitignore",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/model/station.js",
+		"/Users/eduardoportilho/Dropbox (Personal)/_root/_Projects/Arminio/_keys.md",
+		"/Users/eduardoportilho/dev/src/personal/arminio/package.json",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/bot.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/model/bot_wrapper.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/controllers/bot_controller.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/test/model/bot_wrapper_test.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/test/user_state_service_test.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/test/location_service_test.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/test/helpers/test_setup.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/services/db_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/utils/bot_utils.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/services/bot_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/services/user_state_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/BOOTSTRAP.md ",
+		"/Users/eduardoportilho/dev/src/personal/arminio/RATIONALE.md",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/user_state_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/iteractions/save_location.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/env_config.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/Botler state.png",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/logger.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/user_state_service_testservice.js",
+		"/Users/eduardoportilho/dev/src/website/Symfony/src/Spotify/WwwBundle/Twig/LandingExtension.php",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/consts.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/index.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/src/web.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/test/chai.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/Procfile",
+		"/Users/eduardoportilho/dev/src/personal/arminio/index.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/bot.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/location_service.js",
+		"/Users/eduardoportilho/dev/src/personal/arminio/web.js",
+		"/Users/eduardoportilho/Dropbox (Personal)/_Projects/Arminio/_keys.md",
+		"/Users/eduardoportilho/dev/src/personal/arminio/keys.txt",
+		"/Users/eduardoportilho/dev/src/personal/arminio/_keys.md",
+		"/Users/eduardoportilho/Library/Application Support/TaskPaper/theme.less",
+		"/Users/eduardoportilho/Downloads/Users 2/matt/Library/Application Support/TaskPaper/theme.less",
+		"/Users/eduardoportilho/dev/src/temp/elevator/elevator.js",
+		"/Users/eduardoportilho/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/Users/eduardoportilho/.config/omf/init.fish",
+		"/Users/eduardoportilho/dev/src/temp/elevator/untitled.md",
+		"/Applications/Go2Shell.app/Contents/Info.plist",
+		"/Users/eduardoportilho/dev/src/temp/PhpSpecWorkshop/composer.json",
+		"/Users/eduardoportilho/Downloads/Unsaved Preview Document 5 (dragged).pdf",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/Sample BE Requests/list_panel_offers-JP",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/Sample BE Requests/list_panel_offers-JP_2",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/Sample BE Requests/list_panel_offers-PL",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/_fortumo request path.txt",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/Go Premium - request path.txt",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/sample BE request - go premium.txt",
+		"/Users/eduardoportilho/Library/Logs/IntelliJIdea15/idea.log",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/Sample BE Requests/list-panel-offers_PL",
+		"/Users/eduardoportilho/.config/fish/config.fish",
+		"/Users/eduardoportilho/.local/share/omf/init.fish",
+		"/Users/eduardoportilho/.ssh/config",
+		"/Users/eduardoportilho/.local/share/omf/lib/autoload.fish",
+		"/Users/eduardoportilho/.config/omf/custom/alias.fish",
+		"/etc/passwd",
+		"/Users/eduardoportilho/.config/omf/functions/alias.fish",
+		"/Users/eduardoportilho/.local/share/omf/lib/alias.fish",
+		"/Users/eduardoportilho/.config/fish/functions/alias.fish",
+		"/Users/eduardoportilho/.config/omf/theme",
+		"/Users/eduardoportilho/.config/omf/bundle",
+		"/Users/eduardoportilho/dotfiles/git/.gitconfig",
+		"/Users/eduardoportilho/dotfiles/system/.env",
+		"/Users/eduardoportilho/dev/src/website/.git/COMMIT_EDITMSG",
+		"/Users/eduardoportilho/.gitconfig",
+		"/Users/eduardoportilho/dev/tools/dotfiles/.env",
+		"/Users/eduardoportilho/dev/tools/dotfiles/.alias",
+		"/Users/eduardoportilho/dev/tools/dotfiles/.bash_profile",
+		"/Users/eduardoportilho/dev/tools/dotfiles/install.sh",
+		"/Users/eduardoportilho/dev/tools/dotfiles/.inputrc",
+		"/Users/eduardoportilho/test.php",
+		"/Users/eduardoportilho/Downloads/___ynab.csv",
+		"/Users/eduardoportilho/Dropbox (Personal)/Lists/EdusToDoList.taskpaper",
+		"/Users/eduardoportilho/Documents/Spotify/Other/Snippets/BE Offers.list_panel_offers.txt",
+		"/Users/eduardoportilho/Desktop/out.txt",
+		"/Users/eduardoportilho/Dropbox/Lists/EdusToDoList.taskpaper",
+		"/Users/eduardoportilho/Downloads/Teste.taskpaper",
+		"/Users/eduardoportilho/dev/tools/google-libphonenumber/libphonenumber-master/java/libphonenumber/src/com/google/i18n/phonenumbers/data/PhoneNumberMetadataProto_MY",
+		"/Users/eduardoportilho/dev/src/chainsaw/fixtures/payment.generate_purchase_request_from_list2.JSON"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/eduardoportilho/dev/src/personal/arminio",
+			"<open files>",
+			"",
+			"/Users/eduardoportilho/dev/src/temp/elevatorsaga",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"findHeaderTableHeaderRow",
+			"findColumnOrderUsingSelectionText",
+			"\\\\\\\\n",
+			"\\\\n",
+			"bot",
+			"processUpdate",
+			"self",
+			"dbService",
+			"getMsgArgs",
+			"bot",
+			"host",
+			"userState",
+			"dbService",
+			"slService",
+			"dbService",
+			"LOCATION",
+			"Location",
+			"bot",
+			"hasSavedStations",
+			"userStateService",
+			"nearbyStopsService",
+			"locationService",
+			"getUserState",
+			"premium",
+			"/",
+			"/[\\w\\.]*$",
+			"http:\\/\\/s\\d\\.sfcdn\\.se\\/s\\/[\\w\\/\\.]*",
+			"nextBotAction",
+			"currentState",
+			"if",
+			"cts",
+			"constants",
+			"CONST",
+			"CT",
+			"CONST",
+			";\n",
+			"getNextUserAction",
+			"msg",
+			"NearbyStopsServices",
+			"state",
+			"this",
+			"_s",
+			"bot",
+			"init",
+			"log(",
+			"log",
+			"	'",
+			"\"\n",
+			";\n",
+			"JSON.stringfy",
+			"JSO",
+			"token",
+			"display",
+			"today",
+			"atendant",
+			"trig",
+			"tri",
+			"wor",
+			"getCodeObj",
+			"getCodeObjFromCode",
+			"riot",
+			"createWorld",
+			"registerUser",
+			"spawnUserRandomly",
+			"getCodeObjFromCode",
+			"conso",
+			"passengersWaiting",
+			"addFloorToElevatorRoute",
+			"idleElevators",
+			"checkForPassengersWaiting",
+			"stopOnFloor",
+			"bold",
+			");\n",
+			"|",
+			"edua",
+			"fis",
+			"dotpay",
+			"msi",
+			"⁃ ",
+			"・",
+			"◦",
+			"•",
+			"\n",
+			"         ",
+			"	",
+			"         ",
+			" ",
+			"\"is_recurring\": \"true\"",
+			"is_recurring",
+			"fortumo",
+			"Backend service call",
+			"sublim",
+			"Backend service call"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\n",
+			"this",
+			"firebaseService",
+			"",
+			"self",
+			"telegramToken",
+			"attendant",
+			"\\n",
+			"- ",
+			"-",
+			"	",
+			"	- ",
+			"-",
+			"\\n\\nBackend service call"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ynabXt.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"con",
+				"src/consts.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 861.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 361.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
