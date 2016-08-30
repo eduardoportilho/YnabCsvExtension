@@ -12,16 +12,22 @@
   <script src="jasmine-2.4.1/boot.js"></script>
 
   <!-- include source files here... -->
-  <script src="../src/jquery.js"></script>
+  <script src="../src/vendor/jquery.js"></script>
+  <script src="../src/vendor/jsturbo-latest.js"></script>
   <script src="../src/Utils.js"></script>
-  <script src="../src/jsturbo-latest.js"></script>
-  <script src="../src/HeaderFinder.js"></script>
-  <script src="../src/YNAB.js"></script>
+  <script src="../src/ynab/YnabTx.js"></script>
+  <script src="../src/ynab/HeaderFinder.js"></script>
+  <script src="../src/ynab/YnabColumnOrder.js"></script>
+  <script src="../src/ynab/YnabPostExtractProcessing.js"></script>
+  <script src="../src/ynab/YnabCsvGenerator.js"></script>
 
   <!-- include spec files here... -->
   <script src="spec/UtilsSpec.js"></script>
-  <script src="spec/HeaderFinderSpec.js"></script>
-  <script src="spec/YNABSpec.js"></script>
+  <script src="spec/ynab/YnabTxSpec.js"></script>
+  <script src="spec/ynab/HeaderFinderSpec.js"></script>
+  <script src="spec/ynab/YnabColumnOrderSpec.js"></script>
+  <script src="spec/ynab/YnabPostExtractProcessingSpec.js"></script>
+  <script src="spec/ynab/YnabCsvGeneratorSpec.js"></script>
   <script src="spec/ItauSpec.js"></script>
 
 </head>

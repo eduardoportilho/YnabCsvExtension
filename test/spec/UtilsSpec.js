@@ -1,4 +1,4 @@
-describe("Utils", function() {
+describe("[Utils]", function() {
 
     describe("Date utils", function() {
         it("should format YYYY-MM-DD date", function() {
@@ -32,6 +32,17 @@ describe("Utils", function() {
         });
         it("shouldn't match", function() {
             expect(Utils.matchIgnoringCaseAndBlank(' Valr (R$)', 'valor')).toBeFalsy();
+        });
+    });
+
+    describe("isEmpty", function() {
+        it("should detect empty string", function() {
+            expect(Utils.isEmpty(null)).toBeTruthy();
+            expect(Utils.isEmpty(undefined)).toBeTruthy();
+            expect(Utils.isEmpty('')).toBeTruthy();
+        });
+        it("should detect non empty strings", function() {
+            expect(Utils.isEmpty('a')).toBeFalsy();
         });
     });
 });

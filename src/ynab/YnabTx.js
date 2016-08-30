@@ -31,11 +31,38 @@ YnabTx = (function(_utils){
             this.inflow;
     };
 
+    YnabTx.prototype.isIncome = function() {
+        if(!_utils.isEmpty(this.inflow)) {
+            return this.inflow[0] !== '-';
+        }
+        else if(!_utils.isEmpty(this.outflow)) {
+            return this.outflow[0] === '-';
+        }
+        return false;
+    };
+
+    YnabTx.prototype.flipIncomeOutcome = function() {
+        if(!_utils.isEmpty(this.inflow)) {
+            this.inflow = YnabTx.flip(this.inflow);
+        }
+        if(!_utils.isEmpty(this.outflow)) {
+            this.outflow = YnabTx.flip(this.outflow);
+        }
+    }
+
     /**
      * Remove characters not allowed in CSV
      */
     YnabTx.clearCsvString = function(string) {
         return string.replace(/,/g, ';');
+    }
+
+    YnabTx.flip = function(string) {
+        if(string[0] === '-') {
+            return string.replace(/\-/g, '');
+        } else {
+            return '-' + string;
+        }
     }
 
     return YnabTx;

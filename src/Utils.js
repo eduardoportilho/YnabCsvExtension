@@ -187,3 +187,9 @@ Utils.getSelectionNodesOnWindowOrFail = function(aWindow) {
     }
     throw new Error();
 };
+
+Utils.isEmpty = function(aString) {
+    return aString === undefined ||
+        aString === null ||
+        aString.length === 0;
+};

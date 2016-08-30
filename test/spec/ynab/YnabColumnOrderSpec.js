@@ -1,4 +1,4 @@
-describe("[YnabColumnOrder]", function () {
+describe("[YNAB Column Order]", function () {
 
     describe("Column Order Validator", function () {
 

@@ -20,6 +20,7 @@
           "ynab/HeaderFinder.js",
           "ynab/YnabTx.js",
           "ynab/YnabColumnOrder.js",
+          "ynab/YnabPostExtractProcessing.js",
           "ynab/YnabCsvGenerator.js",
           "ynabExportContent.js"
         ]

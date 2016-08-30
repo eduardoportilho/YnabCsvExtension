@@ -1,4 +1,4 @@
-describe("YNAB", function () {
+describe("[YNAB CSV Generator]", function () {
 
     describe("CSV builder", function () {
         var header = 'Date,Payee,Category,Memo,Outflow,Inflow\n';

@@ -1,4 +1,4 @@
-describe("[HeaderFinder]", function () {
+describe("[Header Finder]", function () {
 
     describe("[Header matcher]", function () {
         var possibleHeaders = ['bb', 'bbb'];

@@ -1,4 +1,4 @@
-YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx){
+YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx, ynabPostExtractProcessing){
     var exports = {};
 
     /**
@@ -9,17 +9,22 @@ YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx){
     exports.extractYNABContentFromSelectedElements = function (selectedElements) {
         var selectionTabularData = utils.extractRowColArrayFromSelection(selectedElements);
         var columnOrder = ynabColumnOrder.findColumnOrder(selectionTabularData, selectedElements[0]);
-        var csv = exports.buildYnabCsv(selectionTabularData, columnOrder);
+        var ynabTxs = exports.generateTxs(selectionTabularData, columnOrder);
+        ynabPostExtractProcessing.processInplace(ynabTxs);
+        var csv = exports.buildCsvString(ynabTxs);
         return csv;
     };
 
+    exports.buildYnabCsv = function (tabularData, columnOrder) {
+        var ynabTxs = exports.generateTxs(tabularData, columnOrder);
+        return exports.buildCsvString(ynabTxs);
+    };
+
     /**
-     * Monta o CSV
-     * @param tabularData dados em linhas e colunas
-     * @param columnIndex índice das colunas
+     * Build the array of transactions
      */
-    exports.buildYnabCsv = function (tabularData, columnIndex) {
-        var csv = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
+    exports.generateTxs = function (tabularData, columnIndex) {
+        var txs = [];
         for(var row = 0 ; row < tabularData.length ; row++) {
             var rowValues = tabularData[row];
             try {
@@ -28,15 +33,28 @@ YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx){
                 var inflow = columnIndex.inflow >= 0 ? rowValues[columnIndex.inflow] : '';
                 var outflow = ''; //nunca preencho outflow. Ao invés, uso inflow negativo
                 var ynabTx = new YnabTx(date, payee, inflow, outflow);
-                csv += ynabTx.toCsvLine() + '\n';
+                txs.push(ynabTx);
             } catch(any) {
                 console.log("Ignorando linha inválida: (" + rowValues + ")(" + any.message + ")");
             }
         }
-        return csv;
+        return txs;
     };
 
+    /**
+     * Build the CSV string
+     * @param ynabTxs array of YnabTx
+     */
+    exports.buildCsvString = function (ynabTxs) {
+        var csv = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
+        for(var txIdx = 0 ; txIdx < ynabTxs.length ; txIdx++) {
+            var ynabTx = ynabTxs[txIdx];
+            csv += ynabTx.toCsvLine() + '\n';
+        }
+        return csv;
+    }
+
     return exports;
-} (Utils, YnabColumnOrder, YnabTx));
+} (Utils, YnabColumnOrder, YnabTx, YnabPostExtractProcessing));
 
 
