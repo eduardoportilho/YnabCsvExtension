@@ -1,26 +1,11 @@
-T > YNAB.extractYNABContent(selectionText, selectionElement)
-    (Decide se extrai do texto, do elemento ou de ambos)
-    
-    T > YNAB.extractYNABContentFromTextAndElement(selectionText, selectionElement)
-        _ > Utils.textTableToRowsArray(selectionText);
-        T > YNAB.findColumnOrder(selectionTabularData, selectionElement);
-            (Descobre o índice dos tipos de coluna)
-            
-           T > YNAB.tryToFindColumnOrderFromElementInTable(elementInTable)
-                (Tenta achar um header e a ordem das colunas a partir dele)
-                
-                T > YNAB.tryToFindTableHeader(elementInTable);
-                T > YNAB.findColumnOrderUsingTableHeader(headerValuesOptional);
-                T > YNAB.isValidColumnOrder
-            
-            (se não conseguir pelo elemento, tenta pelo texto)
-            _ > findColumnOrderUsingSelectionText(tabularData)
-            
-        _ > YNAB.buildYnabCsv(selectionTabularData, columnOrder)
-        
-        
-        
-        
-{ date: 1, payee: 2, inflow: 4 }
-{ date: 1, payee: 2, inflow: 4 }
-    
+
+# YNAB CSV Chrome Extension
+
+Chrome extension that extract data from `<table>`s and genereates an CSV file that can be imported on [YNAB](https://www.youneedabudget.com/).
+
+## Usage
+
+* Install the extension
+* Select the rows of the table that you want to import
+* Right click the selection, "Export to YNAB CSV"
+* Save the file and inport it in YNAB
