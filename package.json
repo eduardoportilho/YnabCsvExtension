@@ -1,0 +1,23 @@
+{
+  "name": "ynab-csv-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension that extract data from `<table>`'s and generate a CSV file that can be imported on [YNAB](https://www.youneedabudget.com/).",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardoportilho/YnabCsvExtension.git"
+  },
+  "author": "Eduardo <eduardo@portilho.com> (http://www.portilho.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eduardoportilho/YnabCsvExtension/issues"
+  },
+  "homepage": "https://github.com/eduardoportilho/YnabCsvExtension#readme"
+}
