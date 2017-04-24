@@ -1,3 +1,6 @@
 .idea
 temp.txt
 *.sublime-workspace
+node_modules
+.DS_Store
+npm-debug.log

@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/eduardoportilho/YnabCsvExtension/issues"
   },
-  "homepage": "https://github.com/eduardoportilho/YnabCsvExtension#readme"
+  "homepage": "https://github.com/eduardoportilho/YnabCsvExtension#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-jquery": "^2.1.1",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.12.0"
+  }
 }

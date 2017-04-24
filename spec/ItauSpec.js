@@ -1,4 +1,14 @@
+var jsdom = require('jsdom').jsdom();
+console.log(jsdom)
+var jQuery = require("jquery");
+global.jQuery = global.$ = jQuery;
+window = jsdom.createWindow('')
+global.document = window.document;
+global.addEventListener = window.addEventListener
+
+// console.log($)
 describe("[Itaú]", function () {
+
     describe("Extract Content", function () {
         var header = 'Date,Payee,Category,Memo,Outflow,Inflow\n';
         var $rootElement;
