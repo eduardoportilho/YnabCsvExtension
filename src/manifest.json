@@ -17,6 +17,7 @@
           "vendor/jquery.js",
           "vendor/jsturbo-latest.js",
           "Utils.js",
+          "ynab/TabularDataFinder.js",
           "ynab/HeaderFinder.js",
           "ynab/YnabTx.js",
           "ynab/YnabColumnOrder.js",

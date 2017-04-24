@@ -1,13 +1,13 @@
-YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx, ynabPostExtractProcessing){
+YnabCsvGenerator = (function(utils, tabularDataFinder, ynabColumnOrder, YnabTx, ynabPostExtractProcessing){
     var exports = {};
 
     /**
      * Retorna o conteúdo das transações no formato CSV YNAB (ENTRY POINT)
-     * @param selectedElements Elementos inicial e final da seleção
+     * @param {Element[]} selectedElements - Elementos inicial e final da seleção
      * @returns (string) conteúdo CSV
      */
     exports.extractYNABContentFromSelectedElements = function (selectedElements) {
-        var selectionTabularData = utils.extractRowColArrayFromSelection(selectedElements);
+        var selectionTabularData = tabularDataFinder.extractRowColArrayFromSelection(selectedElements);
         var columnOrder = ynabColumnOrder.findColumnOrder(selectionTabularData, selectedElements[0]);
         var ynabTxs = exports.generateTxs(selectionTabularData, columnOrder);
         ynabPostExtractProcessing.processInplace(ynabTxs);
@@ -55,6 +55,6 @@ YnabCsvGenerator = (function(utils, ynabColumnOrder, YnabTx, ynabPostExtractProc
     }
 
     return exports;
-} (Utils, YnabColumnOrder, YnabTx, YnabPostExtractProcessing));
+} (Utils, TabularDataFinder, YnabColumnOrder, YnabTx, YnabPostExtractProcessing));
 
 

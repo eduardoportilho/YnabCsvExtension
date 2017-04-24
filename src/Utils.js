@@ -59,42 +59,6 @@ Utils.matchIgnoringCaseAndBlank = function(str, regexp) {
 };
 
 /**
- * 1) Localiza a primeira e a última TR que contém os nós selecionados
- * 2) Itera sobre todas as TRs da primeira até a última
- * 3) Extrai o conteúdo de texto dos TDs contidos em cada TR
- * 4) Retorna o conteúdo em um array (linhas) de arrays (colunas).
- * @param selectionNodes elementos dentro de TRs
- * @returns {Array}
- */
-Utils.extractRowColArrayFromSelection = function(selectionNodes) {
-    var nodeA = $(selectionNodes[0]);
-    var nodeB = $(selectionNodes[1]);
-
-    var rowA = nodeA.closest('tr');
-    var rowB = nodeB.closest('tr');
-
-    var indexA = rowA.index();
-    var indexB = rowB.index();
-
-    var row = indexA <= indexB ? rowA : rowB;
-    var lastIndex = indexB > indexA ? indexB : indexA;
-
-    var rows = [], rowContent;
-    while(row.length > 0 && row.index() <= lastIndex) {
-        rowContent = [];
-
-        row.find('td').each(function(idx, el) {
-            rowContent.push($(el).text().trim());
-        });
-
-        rows.push(rowContent);
-
-        row = row.next();
-    }
-    return rows;
-};
-
-/**
  * Format a number with 2 decimal places
  * @param {string} text Number as string
  * @return {string} Number as string with 2 decimal places or empty string if it fails
@@ -180,8 +144,16 @@ Utils.getSelectionOnFramesOrFail = function(frames) {
     throw new Error();
 };
 
+/**
+ * Get the initial and final elements of the selection.
+ * @param  {Window} aWindow - Window of the selection.
+ * @return {Element[]} Initial (0) and final (1) elements of the selection.
+ * @throws {Error} If not able to get selection.
+ */
 Utils.getSelectionNodesOnWindowOrFail = function(aWindow) {
+    // Selection object: https://developer.mozilla.org/en-US/docs/Web/API/Selection
     var selection = aWindow.getSelection();
+    //baseNode is alias for anchorNode, extentNode for focusNode (Both Node objects)
     if(selection.extentNode != null && selection.baseNode) {
         return [selection.extentNode.parentElement, selection.baseNode.parentElement];
     }
